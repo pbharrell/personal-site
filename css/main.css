@@ -1,0 +1,299 @@
+/*** General Assets ***/
+:root {
+    --primaryGreen: #4c8971;
+    --secondaryGreen: #8fa89e;
+    --headingYellow: #ab9155;
+    --selectYellow: #f7ce6f;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Defining color themes */
+.light-theme {
+    --bg: var(--white);
+    --subtitleFontColor: var(--black);
+    --fontColor: var(--white);
+
+    --btnFontColor: var(--white);
+    --btnBg: var(--black);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+
+    --btnFontColor: var(--green);
+    --btnBg: var(--white);
+}
+
+/* Defining body attributes */
+body {
+    background: var(--bg);
+    color: var(--subtitleFontColor);
+    font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Defining navigation bar attributes */
+#page_wrapper {
+    padding-top: 50px;
+    margin-right: 0px;
+    width: 100%;
+    margin: 0 auto;
+    float: right;
+}
+nav {
+    width: 100%;
+    padding-right: 10%;
+}
+nav ul {
+    float: right;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 60%;
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+nav ul li a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--headingYellow);
+    font-size: 22px;
+    text-decoration: none;
+}
+nav li a:hover {
+    color: var(--primaryGreen);
+}
+nav li .curr_page {
+    color: var(--selectYellow)
+}
+
+/* Defining header line w/ selected line */
+#header_line {
+    float: right;   
+    position: static;
+    width: 100%;
+    height: auto;
+    background: var(--primaryGreen);
+}
+
+#header_line nav {
+    height: 7px;
+    width: 100%;
+}
+
+#header_line nav ul {
+    margin-bottom: 0;
+    height: 7px;
+    float: right;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 60%;
+    max-width: 600px;
+    padding-left: 0px;
+}
+
+#header_line nav ul li div {
+    height: 7px;
+    background: var(--primaryGreen);
+    padding-left: 0%;
+}
+
+#header_line nav ul li .home {
+    width: 56.4167px;
+}
+
+#header_line nav ul li .port {
+    width: 80.1167px;
+}
+
+#header_line nav ul li .proj {
+    width: 76.2167px;
+}
+
+#header_line nav ul li .about {
+    width: 55.7px;
+}
+
+#header_line nav ul li .cont {
+    width: 72.5833px;
+    padding-right: 0;
+}
+
+
+#header_line nav ul li .selected {
+    background: var(--selectYellow);
+}
+
+.title_text {
+    margin-top: max(-2vw, -22px);
+    /* margin-bottom: max(-4vw, -40px); */
+    /* height: 97.8px; */
+    float: right;
+    padding-right: 10%;
+    color: var(--primaryGreen);
+}
+
+.title_text p {
+    margin-bottom: 0px;
+}
+
+.subheader_text {
+    /* margin-top: -12px; */
+    padding-right: 4vw;
+    float: right;
+    clear: right;
+    padding-right: 10%;
+    color: var(--headingYellow);
+}
+
+/* Defining the picture attributes */
+.profile_container {
+    top: 38px;
+    float: left;
+    margin-left: 10%;
+    position: absolute;
+    overflow: hidden;
+    width: 22vw;
+    height: 22vw;
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 50%;
+    border: solid var(--primaryGreen) 1.75px;
+}
+
+.profile_container img {
+    width: 100%;
+    height: 100%;
+    /* padding-right: 1px; */
+}
+
+.list {
+    list-style: square;
+}
+
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+/* Defining the content box attributes */
+div.content_box {
+    display: grid;
+    margin-top: 30px;
+    margin-left: 10%;
+    background-color: var(--secondaryGreen);
+    width: 80%;
+    border-radius: 30px;
+}
+
+div.content_box h1 {
+    /* padding-left: 10vw; */
+    padding-left: 60px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    font-size: 45px;
+    color: white;
+    font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;    ;
+}
+
+/*** End General Styling  ***/
+/* Styling for Home page */
+.scrolling-image-container {
+    overflow: hidden;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    /* width: 100%; */
+    /* max-width: 1260px; */
+    height: 350px;
+    position: relative;
+}
+
+.scrolling-image {
+    margin-top: -5px;
+    background: url(../Assets/Scroll_image_scaled.png);
+    background-repeat: repeat-x;
+    /* background-size: contain; */
+    height: 360px;
+    width: calc(1268px * 2);
+    /* width: calc(4267px * 2); */
+    animation: slide 80s linear infinite;
+  }
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(calc(-1268px)); /* The image width */
+    }
+}
+
+div.block-left {
+    position: absolute;
+    background-color: var(--secondaryGreen);
+}
+
+div.fade-left {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    /* left: 10%; */
+
+    display: block;
+  
+    width: 10%;
+    height: 400px;
+  
+    background-image: linear-gradient(to left, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+    100%);
+}
+
+div.fade-right {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    right: 0px;
+
+    display: block;
+  
+    width: 10%;
+    height: 400px;
+  
+    background-image: linear-gradient(to right, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+    100%);
+}
+
+.subheader {
+    margin-top: 10px;
+    margin-right: 10%;
+    position: relative;
+    display: inline-block;
+    
+}
+
+h4 {
+    font-size: max(min(3vw, 30px), 25px);
+    text-align: right;
+    color: white;
+}
+
+/*** Styling for Portfolio page ***/
+.garmin_image {
+    width: 100%;
+    height: 200px;
+    background: url(../Assets/Garmin_image_cropped.png);
+    background-size:cover;
+}
