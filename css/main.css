@@ -1,4 +1,10 @@
 /*** General Assets ***/
+@font-face {
+    font-family:"FranklinGothicBookDwnld";
+    src: url("../Fonts/Franklin_Gothic_Book/franklin_gothic_book_regular.woff");
+    src: url("../Fonts/Franklin_Gothic_Book/franklin_gothic_book_regular.woff2")
+}
+
 :root {
     --primaryGreen: #4c8971;
     --secondaryGreen: #8fa89e;
@@ -31,7 +37,7 @@
 body {
     background: var(--bg);
     color: var(--subtitleFontColor);
-    font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+    font-family: FranklinGothicBookDwnld, Arial, Helvetica, sans-serif;
 }
 
 /* Defining navigation bar attributes */
@@ -57,7 +63,7 @@ nav ul {
     margin-bottom: 16px;
 }
 nav ul li a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: FranklinGothicBookDwnld, Arial, Helvetica, sans-serif; */
     color: var(--headingYellow);
     font-size: 22px;
     text-decoration: none;
@@ -77,23 +83,103 @@ nav li .curr_page {
     margin-left: auto;
 } 
 @media (min-width: 576px) {
+    /* The manually defined Bootstrap container */
     .container-spacing {
         width: 540px;
     }
+
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        margin-bottom: -29px;
+    }
+    #home_sub_line {
+        font-size: 15px;
+    }
+    #portfolio_line {
+        font-size: 15px;
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 150px;
+        height: 150px;
+    }
 }
 @media (min-width: 768px) {
+    /* The manually defined Bootstrap container */
     .container-spacing {
         width: 720px;
     }
+
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        font-size: 66.3px;
+        margin-bottom: 30;
+    }
+    #home_sub_line {
+        font-size: 35.95px;
+    }
+    #portfolio_line {
+        font-size: 58.78px;
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 180px;
+        height: 180px;
+    }
 }
 @media (min-width: 992px) {
+    /* The manually defined Bootstrap container */
     .container-spacing {
         width: 960px;
     }
+
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        font-size: 89.6px;
+        margin-bottom: -38px;
+    }
+    #home_sub_line {
+        font-size: 48.6px;
+    }
+    #portfolio_line {
+        font-size: 79.32px;
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 220px;
+        height: 220px;
+    }
 }
 @media (min-width: 1200px) {
+    /* The manually defined Bootstrap container */
     .container-spacing {
         width: 1140px;
+    }
+
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        font-size: 95.9px;
+        margin-bottom: -40px;
+    }
+    #home_sub_line {
+        font-size: 52px;
+    }
+    #portfolio_line {
+        font-size: 85.4px;
+    }
+
+    .content_box p {
+        font-size: 30px;
+        color: var(--white);
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 230px;
+        height: 230px;
     }
 }
 
@@ -184,10 +270,10 @@ nav li .curr_page {
     /* margin-left: 10%; */
     position: absolute;
     overflow: hidden;
-    width: 22vw;
-    height: 22vw;
-    max-width: 220px;
-    max-height: 220px;
+    /* width: 22vw; */
+    /* height: 22vw; */
+    /* max-width: 220px; */
+    /* max-height: 220px; */
     border-radius: 50%;
     border: solid var(--primaryGreen) 1.75px;
 }
@@ -236,7 +322,7 @@ div.content_box h1 {
     margin-bottom: 0px;
     font-size: 45px;
     color: white;
-    font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;    ;
+    /* font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;    ; */
 }
 
 /*** End General Styling  ***/
