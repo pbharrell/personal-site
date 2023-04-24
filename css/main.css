@@ -195,6 +195,12 @@ div.content_box {
     border-radius: 30px;
 }
 
+div.content_grid {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns:1fr 2fr;
+}
+
 div.content_box h1 {
     /* padding-left: 10vw; */
     padding-left: 60px;
@@ -223,7 +229,8 @@ div.content_box h1 {
     background-repeat: repeat-x;
     /* background-size: contain; */
     height: 360px;
-    width: calc(1268px * 2);
+    /* width: calc(1268px * 3); */
+    width: max(calc(100%*2), calc(1268px * 3));
     /* width: calc(4267px * 2); */
     animation: slide 80s linear infinite;
   }
@@ -291,9 +298,25 @@ h4 {
 }
 
 /*** Styling for Portfolio page ***/
-.garmin_image {
+.portfolio_image {
     width: 100%;
-    height: 200px;
-    background: url(../Assets/Garmin_image_cropped.png);
-    background-size:cover;
+}
+
+.portfolio_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio_text {
+    /* max-width: 700px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio_text p{
+    color: var(--white);
+    padding-top: 70px;
+    font-size: min(22px, 2vw);
 }
