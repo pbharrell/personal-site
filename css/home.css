@@ -1,0 +1,113 @@
+/* Styling for Home page */
+.scrolling-image-container {
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+}
+
+.scrolling-image {
+    margin-top: -5px;
+    background: url(../Assets/Scroll_image_scaled.png);
+    background-repeat: repeat-x;
+    height: 360px;
+    width: max(calc(100%*2), calc(1268px * 3));
+    animation: slide 80s linear infinite;
+  }
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(calc(-1268px)); /* The image width */
+    }
+}
+
+div.block-left {
+    position: absolute;
+    background-color: var(--secondaryGreen);
+}
+
+div.fade-left {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    left: 0px;
+
+    display: block;
+  
+    width: 10%;
+    height: 400px;
+  
+    background-image: linear-gradient(to left, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+    100%);
+}
+
+div.fade-right {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    right: 0px;
+
+    display: block;
+  
+    width: 10%;
+    height: 400px;
+  
+    background-image: linear-gradient(to right, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+    100%);
+}
+
+h4 {
+    font-size: max(min(3vw, 30px), 25px);
+    text-align: right;
+    color: white;
+}
+
+@media (min-width: 576px) {
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        margin-bottom: -29px;
+    }
+    #home_sub_line {
+        font-size: 15px;
+    }
+}
+@media (min-width: 768px) {
+    /* Defining the title and subtitle size for different resolutions */    
+    #home_name_line {
+        font-size: 73.2px;
+        margin-bottom: 30;
+    }
+    #home_sub_line {
+        font-size: 39.7px;
+    }
+}
+
+@media (min-width: 992px) {
+    #home_name_line {
+        font-size: 89.6px;
+        margin-bottom: -38px;
+    }
+    #home_sub_line {
+        font-size: 48.6px;
+    }
+}
+@media (min-width: 1200px) {
+    /* Defining the title and subtitle size for different resolutions */
+    #home_name_line {
+        font-size: 95.9px;
+        margin-bottom: -40px;
+    }
+    #home_sub_line {
+        font-size: 52px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+}

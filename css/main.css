@@ -12,6 +12,10 @@
     --selectYellow: #f7ce6f;
     --white: #FFFFFF;
     --black: #000000;
+    --facebookBlue: #4267B2;
+    --instagramPink: #f00075; /* (official Wordpress coloring) Source: https://wordpress.com/support/wordpress-editor/blocks/social-icons-block/ */
+    --linkedinBlue: #0072b1;
+    --githubBlack: #171515;
 }
 
 /* Defining color themes */
@@ -58,7 +62,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 60%;
+    width: 66%;
     max-width: 600px;
     margin-bottom: 16px;
 }
@@ -73,114 +77,6 @@ nav li a:hover {
 }
 nav li .curr_page {
     color: var(--selectYellow)
-}
-
-.container-spacing {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-} 
-@media (min-width: 576px) {
-    /* The manually defined Bootstrap container */
-    .container-spacing {
-        width: 540px;
-    }
-
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        margin-bottom: -29px;
-    }
-    #home_sub_line {
-        font-size: 15px;
-    }
-    #portfolio_line {
-        font-size: 15px;
-    }
-
-    /* Profile container sizing per resolution */
-    .profile_container {
-        width: 150px;
-        height: 150px;
-    }
-}
-@media (min-width: 768px) {
-    /* The manually defined Bootstrap container */
-    .container-spacing {
-        width: 720px;
-    }
-
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        font-size: 66.3px;
-        margin-bottom: 30;
-    }
-    #home_sub_line {
-        font-size: 35.95px;
-    }
-    #portfolio_line {
-        font-size: 58.78px;
-    }
-
-    /* Profile container sizing per resolution */
-    .profile_container {
-        width: 180px;
-        height: 180px;
-    }
-}
-@media (min-width: 992px) {
-    /* The manually defined Bootstrap container */
-    .container-spacing {
-        width: 960px;
-    }
-
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        font-size: 89.6px;
-        margin-bottom: -38px;
-    }
-    #home_sub_line {
-        font-size: 48.6px;
-    }
-    #portfolio_line {
-        font-size: 79.32px;
-    }
-
-    /* Profile container sizing per resolution */
-    .profile_container {
-        width: 220px;
-        height: 220px;
-    }
-}
-@media (min-width: 1200px) {
-    /* The manually defined Bootstrap container */
-    .container-spacing {
-        width: 1140px;
-    }
-
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        font-size: 95.9px;
-        margin-bottom: -40px;
-    }
-    #home_sub_line {
-        font-size: 52px;
-    }
-    #portfolio_line {
-        font-size: 85.4px;
-    }
-
-    .content_box p {
-        font-size: 30px;
-        color: var(--white);
-    }
-
-    /* Profile container sizing per resolution */
-    .profile_container {
-        width: 230px;
-        height: 230px;
-    }
 }
 
 /* Defining header line w/ selected line */
@@ -205,7 +101,7 @@ nav li .curr_page {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 60%;
+    width: 66%;
     max-width: 600px;
     padding-left: 0px;
 }
@@ -217,23 +113,23 @@ nav li .curr_page {
 }
 
 #header_line nav ul li .home {
-    width: 56.4167px;
+    width: 54.916px;
 }
 
-#header_line nav ul li .port {
-    width: 80.1167px;
+#header_line nav ul li .experience {
+    width: 101.933px;
 }
 
-#header_line nav ul li .proj {
-    width: 76.2167px;
+#header_line nav ul li .portfolio {
+    width: 77.233px;
 }
 
 #header_line nav ul li .about {
-    width: 55.7px;
+    width: 53.55px;
 }
 
-#header_line nav ul li .cont {
-    width: 72.5833px;
+#header_line nav ul li .contact {
+    width: 71.5px;
     padding-right: 0;
 }
 
@@ -244,10 +140,7 @@ nav li .curr_page {
 
 .title_text {
     margin-top: max(-2vw, -22px);
-    /* margin-bottom: max(-4vw, -40px); */
-    /* height: 97.8px; */
     float: right;
-    /* padding-right: 10%; */
     color: var(--primaryGreen);
 }
 
@@ -256,10 +149,8 @@ nav li .curr_page {
 }
 
 .subheader_text {
-    /* padding-right: 4vw; */
     float: right;
     clear: right;
-    /* padding-right: 10%; */
     color: var(--headingYellow);
 }
 
@@ -267,13 +158,8 @@ nav li .curr_page {
 .profile_container {
     top: 38px;
     float: left;
-    /* margin-left: 10%; */
     position: absolute;
     overflow: hidden;
-    /* width: 22vw; */
-    /* height: 22vw; */
-    /* max-width: 220px; */
-    /* max-height: 220px; */
     border-radius: 50%;
     border: solid var(--primaryGreen) 1.75px;
 }
@@ -281,7 +167,6 @@ nav li .curr_page {
 .profile_container img {
     width: 100%;
     height: 100%;
-    /* padding-right: 1px; */
 }
 
 .list {
@@ -301,135 +186,262 @@ nav li .curr_page {
 }
 
 /* Defining the content box attributes */
-div.content_box {
+.content_box {
     display: grid;
     margin-top: 30px;
-    /* margin-left: 10%; */
     background-color: var(--secondaryGreen);
     width: 100%;
     border-radius: 30px;
 }
 
-div.content_grid {
+.content_grid {
     margin-left: 30px;
     display: grid;
     grid-template-columns:1fr 2fr;
 }
 
-div.content_box h1 {
-    padding-left: 60px;
-    padding-top: 15px;
-    margin-bottom: 0px;
-    font-size: 45px;
-    color: white;
-    /* font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;    ; */
-}
-
-/*** End General Styling  ***/
-/* Styling for Home page */
-.scrolling-image-container {
-    overflow: hidden;
-    /* margin-left: 10%; */
-    /* margin-right: 10%; */
-    /* width: 100%; */
-    /* max-width: 1260px; */
-    height: 350px;
-    position: relative;
-}
-
-.scrolling-image {
-    margin-top: -5px;
-    background: url(../Assets/Scroll_image_scaled.png);
-    background-repeat: repeat-x;
-    /* background-size: contain; */
-    height: 360px;
-    /* width: calc(1268px * 3); */
-    width: max(calc(100%*2), calc(1268px * 3));
-    /* width: calc(4267px * 2); */
-    animation: slide 80s linear infinite;
-  }
-
-@keyframes slide {
-    0% {
-        transform: translate(0);
-    }
-    100% {
-        transform: translate(calc(-1268px)); /* The image width */
-    }
-}
-
-div.block-left {
-    position: absolute;
-    background-color: var(--secondaryGreen);
-}
-
-div.fade-left {
-    position: absolute;
-    z-index: 9;
-    top: 0px;
-    /* left: 10%; */
-
-    display: block;
-  
-    width: 10%;
-    height: 400px;
-  
-    background-image: linear-gradient(to left, 
-        rgba(255, 255, 255, 0), 
-        rgba(143, 168, 158, 1)
-    100%);
-}
-
-div.fade-right {
-    position: absolute;
-    z-index: 9;
-    top: 0px;
-    right: 0px;
-
-    display: block;
-  
-    width: 10%;
-    height: 400px;
-  
-    background-image: linear-gradient(to right, 
-        rgba(255, 255, 255, 0), 
-        rgba(143, 168, 158, 1)
-    100%);
-}
-
-.subheader {
-    margin-top: 10px;
-    margin-right: 10%;
-    position: relative;
-    display: inline-block;
-}
-
-h4 {
-    font-size: max(min(3vw, 30px), 25px);
-    text-align: right;
+.content_box h1 {
     color: white;
 }
 
-/*** Styling for Portfolio page ***/
-.portfolio_image {
-    width: 100%;
-}
-
-.portfolio_image img {
-    max-width: 100%;
-    height: auto;
-}
-
-.portfolio_text {
-    /* max-width: 700px; */
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
+#social_media_box div {
+    border-radius: 15px;
     align-items: center;
+}  
+#social_media_box div div div {
+    display: flex;
+    justify-content: center;
+
+}
+#social_media_box div div div a.bi-facebook {
+    color: var(--facebookBlue);
+}
+#social_media_box div div div a.bi-instagram {
+    color: var(--instagramPink);
+}    
+#social_media_box div div div a.bi-linkedin {
+    color: var(--linkedinBlue);
+}    
+#social_media_box div div div a.bi-github {
+    color: var(--linkedinBlack);
+}
+#social_media_box div div div a.btn {
+    color: white;
+}    
+
+
+@media (min-width: 576px) {
+    /* The manually defined Bootstrap container */
+    .container-spacing {
+        width: 540px;
+    }
+
+    .content_box .header {
+        padding-left: 60px;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }    
+
+    /* Defining the font sizes for the content box */
+    .content_box h1 {
+        font-size: 30px;
+        color: var(--white);
+    }
+    .content_box p {
+        font-size: 30px;
+        color: var(--white);
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Social media box sizing per resolution */
+    #social_media_box div div div a {
+        font-size: 50px;
+    }
+    #social_media_box div div div a.btn {
+        font-size: 20px;
+    }    
+}
+@media (min-width: 768px) {
+    /* The manually defined Bootstrap container */
+    .container-spacing {
+        width: 720px;
+    }
+
+    /* Defining the title and subtitle size for different resolutions */    
+    #portfolio_line {
+        font-size: 69.2px;
+    }
+    #about_spacer_line {
+        font-size: 79.32px;
+    }
+    #contact_line {
+        font-size: 79.32px;
+    }
+
+
+    /* Defining the header and subheader used on the homepage specifically */
+    .content_box .header {
+        padding-left: 50px;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        font-size: 42px;
+    }
+    .content_box .subheader {
+        margin-top: 10px;
+        margin-right: 45px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Defining the font sizes for the content box */
+    .content_box h1 {
+        font-size: 31px;
+        color: var(--white);
+    }
+    .content_box p {
+        font-size: 17.9px;
+        color: var(--white);
+        margin-bottom: 7px;
+    }    
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Social media box sizing per resolution */
+    #social_media_box div div div a {
+        font-size: 60px;
+    }
+    #social_media_box div div div a.btn {
+        font-size: 26px;
+    }    
+}
+@media (min-width: 992px) {
+    /* The manually defined Bootstrap container */
+    .container-spacing {
+        width: 960px;
+    }
+
+    /* Defining the title and subtitle size for different resolutions */
+    nav ul {
+        width: 60%;
+    }
+    #header_line nav ul {
+        width: 60%;
+    }
+    #portfolio_line {
+        font-size: 84.9px;
+    }
+    #about_spacer_line {
+        font-size: 79.32px;
+    }
+
+    #contact_line {
+        font-size: 79.32px;
+    }
+
+    .content_box .header {
+        padding-left: 70px;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        font-size: 45px;
+    }
+    .content_box .subheader {
+        margin-top: 10px;
+        margin-right: 80px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Defining the font sizes for the content box */
+    .content_box h1 {
+        font-size: 40px;
+        color: var(--white);
+    }
+    .content_box p {
+        font-size: 21px;
+        color: var(--white);
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Social media box sizing per resolution */
+    #social_media_box div div div a {
+        font-size: 70px;
+    }
+    #social_media_box div div div a.btn {
+        font-size: 35px;
+    }    
+
+}
+@media (min-width: 1200px) {
+    /* The manually defined Bootstrap container */
+    .container-spacing {
+        width: 1140px;
+    }
+
+    /* Defining the title and subtitle size for different resolutions */
+    #portfolio_line {
+        font-size: 90.5px;
+    }
+    #about_spacer_line {
+        font-size: 79.32px;
+    }
+
+    #contact_line {
+        font-size: 79.32px;
+    }
+
+    .content_box .header {
+        padding-left: 85px;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        font-size: 55px;
+    }
+    .content_box .subheader {
+        margin-top: 10px;
+        margin-right: 100px;
+        position: relative;
+        display: inline-block;
+    }    
+
+    /* Defining the font sizes for the content box */
+    .content_box h1 {
+        font-size: 48px;
+        color: var(--white);
+    }
+    .content_box p {
+        font-size: 26px;
+        color: var(--white);
+    }
+
+    /* Profile container sizing per resolution */
+    .profile_container {
+        width: 230px;
+        height: 230px;
+    }
+
+    /* Social media box sizing per resolution */
+    #social_media_box div div div a {
+        font-size: 90px;
+    }
+    #social_media_box div div div a.btn {
+        font-size: 43px;
+    }    
 }
 
-.portfolio_text p{
-    color: var(--white);
-    padding-top: 70px;
-    font-size: min(22px, 2vw);
+
+@media (min-width: 1400px) {
 }

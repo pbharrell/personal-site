@@ -1,0 +1,10 @@
+// Including all of bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Overriding any constants and custom code here
+// ------- customize primary button color --------
+$primary-green: #4c8971;
+
+.btn-primary {
+    @include button-variant($primary-green, darken($primary-green, 7.5%));
+}

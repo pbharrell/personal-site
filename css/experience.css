@@ -1,0 +1,122 @@
+/*** Styling for Experience page ***/
+.experience_image {
+    width: 100%;
+}
+
+.experience_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.experience_text {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.experience_text p{
+    color: var(--white);
+    padding-top: 70px;
+    font-size: min(22px, 2vw);
+}
+
+@media (min-width: 576px) {
+    #experience_line {
+        font-size: 15px;
+    }
+
+    /* Defining for specifically the work experience box */
+    #garmin_title {
+        padding-top: 60px;
+    }
+    #consumers_title {
+        padding-top: 103px;
+    }    
+}
+@media (min-width: 768px) {
+    #experience_line {
+        font-size: 64.7px;
+    }
+
+    /* Defining for specifically the work experience box */
+    #experience_box .top_row {
+        padding-top: 15px;
+    }
+    #experience_box .bottom_row {
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+
+    #experience_box #garmin_title {
+        padding-top: 10px;
+    }
+    #experience_box #consumers_title {
+        padding-top: 75px;
+    }
+}
+@media (min-width: 992px) {
+    #experience_line {
+        font-size: 79.32px;
+    }
+
+    /* Defining for specifically the work experience box */
+    #experience_box .top_row {
+        padding-top: 25px;
+    }
+    #experience_box .bottom_row {
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+
+    #experience_box #garmin_title {
+        padding-top: 50px;
+    }
+    #experience_box #consumers_title {
+        padding-top: 81px;
+    }    
+}
+@media (min-width: 1200px) {
+    #experience_line {
+        font-size: 85.4px;
+    }
+    /* Defining for specifically the work experience box */
+    #experience_box .top_row {
+        padding-top: 25px;
+    }
+    #experience_box .bottom_row {
+        padding-top: 45px;
+        padding-bottom: 15px;
+    }
+
+    #experience_box #garmin_title {
+        padding-top: 60px;
+    }
+    #experience_box #consumers_title {
+        padding-top: 103px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    #experience_line {
+        font-size: 85.4px;
+        padding-bottom: 5px;
+    }
+
+    /* Defining for specifically the work experience page */
+    #experience_box .top_row {
+        padding-top: 35px;
+    }
+    #experience_box .bottom_row {
+        padding-top: 50px;
+        padding-bottom: 15px;
+    }
+
+    #experience_box #garmin_title {
+        padding-top: 82px;
+    }
+    #experience_box #consumers_title {
+        padding-top: 132px;
+    }    
+}

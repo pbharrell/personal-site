@@ -8,69 +8,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to my Website!</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/experience.css">
+    <script src="../javascript/header.js" type="text/javascript" defer></script>
   </head>
   <body class="light-theme">
-    <!-- Navigation bar definition -->
-    <div id="page_wrapper" style="margin-bottom: 10px">
-      <nav>
-        <div class="container-spacing">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="portfolio.html" class="curr_page">Portfolio</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>  
-        </div>
-      </nav>
-      <!-- Line & profile pic -->
-      <div id="header_line">
-        <nav>
-          <div class="container-spacing">
-            <ul>
-              <li><div class="home"></div></li>
-              <li><div class="port selected"></div></li>
-              <li><div class="proj"></div></li>
-              <li><div class="about"></div></li>
-              <li><div class="cont"></div></li>
-            </ul>  
-          </div>
-        </nav>
-      </div>
-      <div class="outer container-spacing">
-        <div id="portfolio_line" class="title_text">
-          <p>Work Experience</p>
-        </div>
-      </div>
-    </div>
-    <div class="container-spacing">
-      <div class="profile_container">
-        <img src="../Assets/Profile_pic_crop.webp" alt="Profile">
-      </div>  
-    </div>
+    <!-- Header line defined in header.js -->
+    <header-component pageName="portfolio"></header-component>
 
     <div class="container">
-      <!-- Skills Box -->
-      <div class="container-fluid content_box">
-        <div class="row" style="padding-top: 40px;">
+      <!-- Portfolio Box -->
+      <div id="experience_box" class="container-fluid content_box">
+        <div class="row top_row">
           <div class="col-lg-5 col-md-6">
-            <img class="portfolio_image" src="../Assets/Garmin_image_cropped.png"></img>
+            <img class="experience_image" src="../Assets/Garmin_image_cropped.png"></img>
           </div>
-          <div class="col-lg-7 col-md-6" style="display : flex; align-items : center;">
-            <!-- bruh -->
-            <p>Bruh</p>
-            <!-- <div class="spacer" style="height: 50px"></div> -->
+          <div class="col-lg-7 col-md-6">
+            <!-- <div class="spacer" style="height: 100px; width: 100%;"></div> -->
+            <h1 id="garmin_title">Software Engineering Intern</h1>
+            <p>I worked in Python writing automated tests for in-car infotainment system. 
+              I worked as part of a team with a Git repository, performed code reviews, 
+              and wrote code for use of other divisions. I developed a deep low-level
+              understanding of the system and its Android OS.</p>
+            
           </div>
         </div>
-        <div class="row" style="padding-top: 60px; padding-bottom: 30px;">
-          <div class="col-lg-5 col-md-5">
-            <img class="portfolio_image" src="../Assets/Consumers_image_cropped.png"></img>
+        <div class="row bottom_row">
+          <div class="col-lg-5 col-md-6">
+            <img class="experience_image" src="../Assets/Consumers_image_cropped.png"></img>
           </div>
-          <div class="col-lg-7 col-md-7" style="display : flex; align-items : center;">
-            <!-- <div class="spacer" style="height: 80px"></div> -->
-            <p>Bruh</p>
+          <div class="col-lg-7 col-md-6">
+            <h1 id="consumers_title">IT Cooperative Assistant</h1>
+            <p>I simplified and automated many complex company workflows, netting significant company time 
+              savings. I gained general business skills like communicating effectively in a business setting and 
+              pitching and presenting solutions to a customer. I made web apps and data visualizations using 
+              Microsoft's Power Tools.</p>
           </div>
         </div>
       </div>
