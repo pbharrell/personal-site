@@ -54,7 +54,6 @@ body {
 }
 nav {
     width: 100%;
-    /* padding-right: 10%; */
 }
 nav ul {
     float: right;
@@ -67,7 +66,6 @@ nav ul {
     margin-bottom: 16px;
 }
 nav ul li a {
-    /* font-family: FranklinGothicBookDwnld, Arial, Helvetica, sans-serif; */
     color: var(--headingYellow);
     font-size: 22px;
     text-decoration: none;
@@ -194,10 +192,8 @@ nav li .curr_page {
     border-radius: 30px;
 }
 
-.content_grid {
-    margin-left: 30px;
-    display: grid;
-    grid-template-columns:1fr 2fr;
+.page_content {
+    padding-bottom: 30px;
 }
 
 .content_box h1 {
@@ -236,13 +232,6 @@ nav li .curr_page {
         width: 540px;
     }
 
-    .content_box .header {
-        padding-left: 60px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 25px;
-    }    
-
     /* Defining the font sizes for the content box */
     .content_box h1 {
         font-size: 30px;
@@ -274,38 +263,20 @@ nav li .curr_page {
     }
 
     /* Defining the title and subtitle size for different resolutions */    
-    #portfolio_line {
-        font-size: 69.2px;
-    }
     #about_spacer_line {
         font-size: 79.32px;
     }
     #contact_line {
         font-size: 79.32px;
     }
-
-
-    /* Defining the header and subheader used on the homepage specifically */
-    .content_box .header {
-        padding-left: 50px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 42px;
-    }
-    .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 45px;
-        position: relative;
-        display: inline-block;
-    }
     
     /* Defining the font sizes for the content box */
     .content_box h1 {
-        font-size: 31px;
+        font-size: 32px;
         color: var(--white);
     }
     .content_box p {
-        font-size: 17.9px;
+        font-size: 19px;
         color: var(--white);
         margin-bottom: 7px;
     }    
@@ -337,9 +308,6 @@ nav li .curr_page {
     #header_line nav ul {
         width: 60%;
     }
-    #portfolio_line {
-        font-size: 84.9px;
-    }
     #about_spacer_line {
         font-size: 79.32px;
     }
@@ -363,11 +331,11 @@ nav li .curr_page {
 
     /* Defining the font sizes for the content box */
     .content_box h1 {
-        font-size: 40px;
+        font-size: 39px;
         color: var(--white);
     }
     .content_box p {
-        font-size: 21px;
+        font-size: 22px;
         color: var(--white);
     }
 
@@ -393,9 +361,6 @@ nav li .curr_page {
     }
 
     /* Defining the title and subtitle size for different resolutions */
-    #portfolio_line {
-        font-size: 90.5px;
-    }
     #about_spacer_line {
         font-size: 79.32px;
     }
@@ -404,26 +369,13 @@ nav li .curr_page {
         font-size: 79.32px;
     }
 
-    .content_box .header {
-        padding-left: 85px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 55px;
-    }
-    .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 100px;
-        position: relative;
-        display: inline-block;
-    }    
-
     /* Defining the font sizes for the content box */
     .content_box h1 {
-        font-size: 48px;
+        font-size: 43px;
         color: var(--white);
     }
     .content_box p {
-        font-size: 26px;
+        font-size: 23px;
         color: var(--white);
     }
 
@@ -444,4 +396,30 @@ nav li .curr_page {
 
 
 @media (min-width: 1400px) {
+    /* Defining the title and subtitle size for different resolutions */
+    #about_spacer_line {
+        font-size: 79.32px;
+    }
+
+    #contact_line {
+        font-size: 79.32px;
+    }
+
+    /* Defining the font sizes for the content box */
+    .content_box h1 {
+        font-size: 48px;
+        color: var(--white);
+    }
+    .content_box p {
+        font-size: 26px;
+        color: var(--white);
+    }
+
+    /* Social media box sizing per resolution */
+    #social_media_box div div div a {
+        font-size: 90px;
+    }
+    #social_media_box div div div a.btn {
+        font-size: 43px;
+    }        
 }

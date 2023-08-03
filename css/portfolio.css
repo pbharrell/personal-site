@@ -1,0 +1,114 @@
+.portfolio_image {
+    width: 100%;
+}
+
+#portfolio_box .container-fluid {
+    padding-bottom: 15px;
+}
+
+#portfolio_box .portfolio_image {
+    margin-bottom: 1%;
+}
+
+#portfolio_box .portfolio_title {
+    text-align: center;
+}    
+
+
+@media (min-width: 576px) {
+    #experience_line {
+        font-size: 15px;
+    }
+
+    /* Defining for specifically the project portfolio box */
+    #garmin_title {
+        padding-top: 60px;
+    }
+    #consumers_title {
+        padding-top: 103px;
+    }    
+}
+@media (min-width: 768px) {
+    #portfolio_line {
+        font-size: 69.2px;
+    }
+
+    #portfolio_box .container-fluid {
+        padding-top: 20px;
+    }
+
+    /* Defining for specifically the project portfolio box */
+    #portfolio_box .portfolio_image {
+        border: .30rem solid;
+        border-color: #4c8970;
+    }    
+
+    #portfolio_box .container-fluid .following_row {
+        padding-top: 14px;
+    }
+}
+@media (min-width: 992px) {
+    #portfolio_line {
+        font-size: 84.9px;
+    }
+
+    /* Defining for specifically the project portfolio box */
+    #portfolio_box .portfolio_image {
+        border: .35rem solid;
+        border-radius: .7%;
+        border-color: #4c8970;
+    }    
+
+    #portfolio_box .container-fluid {
+        padding-top: 35px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    #portfolio_box .container-fluid .following_row {
+        padding-top: 18px;
+    }
+}
+@media (min-width: 1200px) {
+    #portfolio_line {
+        font-size: 90.5px;
+    }
+
+    /* Defining for specifically the project portfolio box */
+    #portfolio_box .portfolio_image {
+        border: .45rem solid;
+        border-color: #4c8970;
+    }    
+
+    #portfolio_box .container-fluid {
+        padding-top: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #portfolio_box .container-fluid .following_row {
+        padding-top: 20px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    #portfolio_line {
+        font-size: 90.5px;
+    }
+
+    /* Defining for specifically the project portfolio box */
+    #portfolio_box .portfolio_image {
+        border: .55rem solid;
+        border-color: #4c8970;
+    }    
+
+    #portfolio_box .container-fluid {
+        padding-top: 50px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+
+    #portfolio_box .container-fluid .following_row {
+        padding-top: 30px;
+    }
+}

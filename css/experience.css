@@ -3,11 +3,6 @@
     width: 100%;
 }
 
-.experience_image img {
-    max-width: 100%;
-    height: auto;
-}
-
 .experience_text {
     padding-left: 30px;
     padding-right: 30px;
@@ -18,7 +13,6 @@
 .experience_text p{
     color: var(--white);
     padding-top: 70px;
-    font-size: min(22px, 2vw);
 }
 
 @media (min-width: 576px) {
@@ -36,44 +30,54 @@
 }
 @media (min-width: 768px) {
     #experience_line {
-        font-size: 64.7px;
+        font-size: 65.1px;
     }
 
     /* Defining for specifically the work experience box */
-    #experience_box .top_row {
+    #experience_box .container-fluid .top_row {
         padding-top: 15px;
     }
-    #experience_box .bottom_row {
-        padding-top: 0px;
+    #experience_box .container-fluid .bottom_row {
+        padding-top: 10px;
         padding-bottom: 15px;
     }
 
     #experience_box #garmin_title {
-        padding-top: 10px;
+        padding-top: 8px;
     }
     #experience_box #consumers_title {
-        padding-top: 75px;
+        padding-top: 35px;
     }
 }
 @media (min-width: 992px) {
     #experience_line {
-        font-size: 79.32px;
+        font-size: 79.5px;
     }
 
     /* Defining for specifically the work experience box */
-    #experience_box .top_row {
+    #experience_box .container-fluid {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    #experience_box .container-fluid .row .exp_image_col {
+        padding-right: 17px;
+    }
+    #experience_box .container-fluid .row .exp_text_col {
+        padding-left: 17px;
+    }
+    #experience_box .container-fluid .top_row {
         padding-top: 25px;
     }
-    #experience_box .bottom_row {
+    #experience_box .container-fluid .bottom_row {
         padding-top: 35px;
         padding-bottom: 15px;
     }
 
     #experience_box #garmin_title {
-        padding-top: 50px;
+        padding-top: 20px;
     }
     #experience_box #consumers_title {
-        padding-top: 81px;
+        padding-top: 55px;
     }    
 }
 @media (min-width: 1200px) {
@@ -81,19 +85,29 @@
         font-size: 85.4px;
     }
     /* Defining for specifically the work experience box */
-    #experience_box .top_row {
+    #experience_box .container-fluid {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #experience_box .container-fluid .row .exp_image_col {
+        padding-right: 25px;
+    }
+    #experience_box .container-fluid .row .exp_text_col {
+        padding-left: 25px;
+    }
+    #experience_box .container-fluid .top_row {
         padding-top: 25px;
     }
-    #experience_box .bottom_row {
-        padding-top: 45px;
+    #experience_box .container-fluid .bottom_row {
+        padding-top: 40px;
         padding-bottom: 15px;
     }
 
     #experience_box #garmin_title {
-        padding-top: 60px;
+        padding-top: 43px;
     }
     #experience_box #consumers_title {
-        padding-top: 103px;
+        padding-top: 90px;
     }
 }
 
@@ -101,22 +115,32 @@
 @media (min-width: 1400px) {
     #experience_line {
         font-size: 85.4px;
-        padding-bottom: 5px;
     }
 
     /* Defining for specifically the work experience page */
-    #experience_box .top_row {
+    #experience_box .container-fluid {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    #experience_box .container-fluid .row .exp_image_col {
+        padding-right: 35px;
+    }
+    #experience_box .container-fluid .row .exp_text_col {
+        padding-left: 35px;
+    }
+    #experience_box .container-fluid .top_row {
         padding-top: 35px;
     }
-    #experience_box .bottom_row {
-        padding-top: 50px;
+    #experience_box .container-fluid .bottom_row {
+        padding-top: 40px;
         padding-bottom: 15px;
     }
 
     #experience_box #garmin_title {
-        padding-top: 82px;
+        padding-top: 35px;
     }
     #experience_box #consumers_title {
-        padding-top: 132px;
-    }    
+        padding-top: 90px;
+    }
 }
