@@ -262,13 +262,6 @@ nav li .curr_page {
         width: 720px;
     }
 
-    /* Defining the title and subtitle size for different resolutions */    
-    #about_spacer_line {
-        font-size: 79.32px;
-    }
-    #contact_line {
-        font-size: 79.32px;
-    }
     
     /* Defining the font sizes for the content box */
     .content_box h1 {
@@ -308,13 +301,7 @@ nav li .curr_page {
     #header_line nav ul {
         width: 60%;
     }
-    #about_spacer_line {
-        font-size: 79.32px;
-    }
 
-    #contact_line {
-        font-size: 79.32px;
-    }
 
     .content_box .header {
         padding-left: 70px;
@@ -360,14 +347,6 @@ nav li .curr_page {
         width: 1140px;
     }
 
-    /* Defining the title and subtitle size for different resolutions */
-    #about_spacer_line {
-        font-size: 79.32px;
-    }
-
-    #contact_line {
-        font-size: 79.32px;
-    }
 
     /* Defining the font sizes for the content box */
     .content_box h1 {
@@ -396,14 +375,6 @@ nav li .curr_page {
 
 
 @media (min-width: 1400px) {
-    /* Defining the title and subtitle size for different resolutions */
-    #about_spacer_line {
-        font-size: 79.32px;
-    }
-
-    #contact_line {
-        font-size: 79.32px;
-    }
 
     /* Defining the font sizes for the content box */
     .content_box h1 {
