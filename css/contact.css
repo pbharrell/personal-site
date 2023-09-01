@@ -1,124 +1,197 @@
 :root {
-    --primaryGreen: #4c8971;
-    --secondaryGreen: #8fa89e;
-    --headingYellow: #ab9155;
-    --selectYellow: #f7ce6f;
-    --white: #FFFFFF;
-    --black: #000000;
-    --facebookBlue: #4267B2;
-    --instagramPink: #f00075; /* (official Wordpress coloring) Source: https://wordpress.com/support/wordpress-editor/blocks/social-icons-block/ */
-    --linkedinBlue: #0072b1;
-    --githubBlack: #171515;
+  --primaryGreen: #4c8971;
+  --secondaryGreen: #8fa89e;
+  --headingYellow: #ab9155;
+  --selectYellow: #f7ce6f;
+  --white: #ffffff;
+  --black: #000000;
+  --facebookBlue: #4267b2;
+  --instagramPink: #f00075; /* (official Wordpress coloring) Source: https://wordpress.com/support/wordpress-editor/blocks/social-icons-block/ */
+  --linkedinBlue: #0072b1;
+  --githubBlack: #171515;
+
+  --split-width-992: 250px;
+  --split-height-992: 350px;
+
+  --split-width-1200: 350px;
+  --split-height-1200: 400px;
+
+  --split-width-1400: 450px;
+  --split-height-1400: 450px;
 }
 
 @media (min-width: 576px) {
-    /* Defining for specifically the about header */
-
-    /* Defining for specifically the about box */
 }
 @media (min-width: 768px) {
-    #contact_line {
-        font-size: 66.6px;
-    }
-
-    /* Defining for specifically the about header */
-
-    /* Defining for specifically the about box */
-    #about_box .container-fluid {
-        padding-top: 20px;
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
 }
+
 @media (min-width: 992px) {
-    #contact_line {
-        font-size: 81.5px;
-    }
+  #contact_line {
+    font-size: 81.5px;
+  }
 
-    /* Defining for specifically the contact box */
-    .content_box {
-        padding: 0px;
-    }
+  /* Defining for specifically the about box */
+  .content_box {
+    padding: 0px;
+  }
 
-    .content_box .container-fluid {
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-    }
+  .content_box .container-fluid {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+  }
 
-    .grey-half {
-        width: calc(50% - 125px);
-        background-color: grey;
-        border-radius: 30px 0 0 30px;
-    }
-    /* .grey-half .h1 {
-        position: absolute;
-        left: 30px;
-    } */
-    .green-half {
-        width: calc(50% + 125px);
-        border-left: 250px solid gray;
-        border-bottom: 400px solid var(--secondaryGreen);
-        border-radius: 0 30px 30px 0;
-    }
-    /* .green-half .h1 {
-        position: absolute;
-        left: 30px;
-    } */
+  .grey-half {
+    width: calc(50% - var(--split-width-992) / 2);
+    height: 100%;
+    background-color: grey;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .grey-half h1 {
+    position: relative;
+    left: 15%;
+    font-size: 48.5px;
+    padding-bottom: 40px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
 
-    .grey-green-content {
-        position: relative;
-    }
-    .grey-green-content .left-half {
-        position: relative;
-    }
-    .grey-green-content .right-half {
-        position: relative;
-    }
+  .grey-half h2 {
+    position: relative;
+    color: white;
+    left: 15.7%;
+    font-size: 29px;
+    padding-bottom: 50px;
+    letter-spacing: 1.1px;
+  }
 
+  .color-split {
+    border-left: var(--split-width-992) solid gray;
+    border-bottom: var(--split-height-992) solid var(--secondaryGreen);
+    border-radius: 0 30px 30px 0;
+    height: 0px;
+  }
 
-    .content_box .header {
-        font-size: 45px;
-        padding-left: 12px;
-    }
+  .green-half {
+    width: calc(50% - var(--split-width-992) / 2);
+    /* text-align: right; */
+    display: flex;
+    /* justify-content: right; */
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
 
-    #about_box .container-fluid {
-        padding-top: 35px;
-        padding-left: 34px;
-        padding-right: 34px;
-    }
+  .green-half h1 {
+    position: absolute;
+    text-align: right;
+    right: 11.39%;
+    font-size: 48.5px;
+    padding-bottom: 40px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
 
+  .green-half h2 {
+    position: relative;
+    text-align: right;
+    width: fit-content;
+    color: white;
+    right: -50%;
+    font-size: 29px;
+    padding-bottom: 50px;
+    letter-spacing: 1.1px;
+  }
+
+  .content_box .header {
+    font-size: 45px;
+    padding-left: 12px;
+  }
+
+  #about_box .container-fluid {
+    padding-top: 35px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
 }
 @media (min-width: 1200px) {
-    #contact_line {
-        font-size: 87px;
-    }
+  #contact_line {
+    font-size: 87px;
+  }
 
-    .grey-half {
-        width: calc(50% - 175px);
-    }
-    
-    .green-half {
-        width: calc(50% + 175px);
-        border-left: 350px solid gray;
-    }
+  .root {
+    --split-width: 350px;
+  }
+
+  .grey-half {
+    width: calc(50% - var(--split-width-1200) / 2);
+  }
+
+  .grey-half h1 {
+    position: relative;
+    left: 16.2%;
+    font-size: 53.5px;
+    padding-bottom: 40px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
+
+  .grey-half h2 {
+    position: relative;
+    color: white;
+    left: 17%;
+    font-size: 34px;
+    padding-bottom: 50px;
+    letter-spacing: 1.1px;
+  }
+
+  .color-split {
+    border-left: var(--split-width-1200) solid gray;
+    border-bottom: var(--split-height-1200) solid var(--secondaryGreen);
+  }
+
+  .green-half {
+    width: calc(50% - var(--split-width-1200) / 2);
+  }
 }
 
-
 @media (min-width: 1400px) {
+  /* Defining for specifically the contact box */
+  .grey-half {
+    width: calc(50% - var(--split-width-1400) / 2);
+  }
 
-    /* Defining for specifically the about box */
-    .content_box .header {
-        font-size: 53px;
-    }
+  .grey-half h1 {
+    position: relative;
+    left: 19.5%;
+    font-size: 62px;
+    padding-bottom: 40px;
+    letter-spacing: .4px;
+    word-spacing: -1px;
+  }
 
-    .grey-half {
-        width: calc(50% - 225px);
-    }
-    
-    .green-half {
-        width: calc(50% + 225px);
-        border-left: 450px solid gray;
-    }
+  .grey-half h2 {
+    position: relative;
+    color: white;
+    left: 20%;
+    font-size: 38.2px;
+    padding-bottom: 50px;
+    letter-spacing: 1.1px;
+  }
+
+  .color-split {
+    border-left: var(--split-width-1400) solid gray;
+    border-bottom: var(--split-height-1400) solid var(--secondaryGreen);
+  }
+
+  .green-half {
+    width: calc(50% + var(--split-width-1400) / 2);
+  }
 }
