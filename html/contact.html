@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="../javascript/header.js" type="text/javascript" defer></script>
+    <script src="../javascript/header.js" type="text/javascript"></script>
   </head>
   <body class="light-theme">
     <!-- Header line defined in header.js -->
-    <header-component pageName="contact"></header-component>
+    <header-component pagename="contact"></header-component>
 
     <div class="container content_box">
       <div class="container-fluid">
@@ -30,9 +30,62 @@
           <h2>bruh fart</h2>
         </div>
         <script>
+          let header = document.getElementById("header_line");
+          // header.getBoundingClientRect()
+          console.log(header.getBoundingClientRect());
+
+          function GetScreenCordinates(obj) {
+            var p = {};
+            p.x = obj.offsetLeft;
+            p.y = obj.offsetTop;
+            while (obj.offsetParent) {
+              p.x = p.x + obj.offsetParent.offsetLeft;
+              p.y = p.y + obj.offsetParent.offsetTop;
+              if (obj == document.getElementsByTagName("body")[0]) {
+                break;
+              }
+              else {
+                obj = obj.offsetParent;
+              }
+            }
+            return p;
+          }
+
           // Getting the grey-half children
-          let green-children
+          let grey_children = document.getElementsByClassName("grey-half")[0].children;
+          let bounding_rects = {};
+          let coords = {}
+          for (grey_child of grey_children) {
+            bounding_rects[grey_child.localName] = grey_child.getBoundingClientRect();
+            coords[grey_child.localName] = GetScreenCordinates(grey_child);
+            // grey_child.style.position = "absolute"
+          }
+          console.log(coords);
+
           // Getting the green-half children
+          let green_children = document.getElementsByClassName("green-half")[0].children;
+          for (green_child of green_children) {
+            console.log(green_child);
+            if (green_child.localName == "h1") {
+              // console.log(screen.width - bounding_rects["h1"].top);
+              // green_child.offsetLeft = screen.width - bounding_rects["h2"];
+              green_child.style.position = "absolute";
+              // green_child.style.right = String(bounding_rects["h1"].right)+"px";
+              // console.log($("grey-half").first().position().left);
+              green_child.style.top = String(bounding_rects["h2"].top)+"px";
+              console.log(green_child.style.top);
+            }
+            else if (green_child.localName == "h2") {
+              green_child.style.position = "absolute";
+              // green_child.style.right = String(bounding_rects["h1"].right)+"px";
+              // console.log($("grey-half").first().position().left);
+              // green_child.style.top = String(bounding_rects["h1"].top)+"px";
+              console.log(green_child.style.top);
+
+            }
+            // offsets[green_child.localName] = green_child.offsetLeft;
+          }
+
 
         </script>
       </div>
@@ -68,7 +121,7 @@
 
     <!-- putting this at the end of body allows all preceeding page
          information to load on the page before loading script :) -->
-    <script src="javascript/app.js"></script>
+    <script src="../javascript/app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
   </body>
 </html>

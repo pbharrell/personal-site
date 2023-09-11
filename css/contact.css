@@ -195,3 +195,7 @@
     width: calc(50% + var(--split-width-1400) / 2);
   }
 }
+
+header-component {
+  height: 500px;
+}
