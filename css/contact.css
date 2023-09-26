@@ -10,12 +10,15 @@
   --linkedinBlue: #0072b1;
   --githubBlack: #171515;
 
+  --box-width-992: 960px;
   --split-width-992: 250px;
   --split-height-992: 350px;
 
+  --box-width-1200: 1140px;
   --split-width-1200: 350px;
   --split-height-1200: 400px;
 
+  --box-width-1400: 1320px;
   --split-width-1400: 450px;
   --split-height-1400: 450px;
 }
@@ -41,13 +44,23 @@
     display: flex;
   }
 
+  .container .container-fluid h1 {
+    font-size: 48.5px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
+
+  .container .container-fluid h2 {
+    font-size: 29px;
+    letter-spacing: 1.1px;
+  }
+
   .grey-half {
-    width: calc(50% - var(--split-width-992) / 2);
+    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
     height: 100%;
     background-color: grey;
     border-radius: 30px 0 0 30px;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     justify-content: center;
     white-space: nowrap;
@@ -55,33 +68,25 @@
   .grey-half h1 {
     position: relative;
     left: 15%;
-    font-size: 48.5px;
     padding-bottom: 40px;
-    letter-spacing: .5px;
-    word-spacing: -1px;
   }
 
   .grey-half h2 {
     position: relative;
     color: white;
     left: 15.7%;
-    font-size: 29px;
     padding-bottom: 50px;
-    letter-spacing: 1.1px;
   }
 
   .color-split {
     border-left: var(--split-width-992) solid gray;
     border-bottom: var(--split-height-992) solid var(--secondaryGreen);
-    border-radius: 0 30px 30px 0;
     height: 0px;
   }
 
   .green-half {
-    width: calc(50% - var(--split-width-992) / 2);
-    /* text-align: right; */
+    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
     display: flex;
-    /* justify-content: right; */
     display: flex;
     align-items: right;
     flex-direction: column;
@@ -90,24 +95,23 @@
   }
 
   .green-half h1 {
-    position: absolute;
+    position: relative;
     text-align: right;
-    right: 11.39%;
+    right: 15%;
     font-size: 48.5px;
-    padding-bottom: 40px;
     letter-spacing: .5px;
     word-spacing: -1px;
+    padding-top: 40px;
   }
 
   .green-half h2 {
     position: relative;
     text-align: right;
-    width: fit-content;
     color: white;
-    right: -50%;
+    right: 15.7%;
     font-size: 29px;
-    padding-bottom: 50px;
     letter-spacing: 1.1px;
+    padding-top: 50px;
   }
 
   .content_box .header {
@@ -130,26 +134,32 @@
     --split-width: 350px;
   }
 
+  .container .container-fluid h1 {
+    font-size: 53.5px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
+
+  .container .container-fluid h2 {
+    font-size: 34px;
+    letter-spacing: 1.1px;
+  }
+
   .grey-half {
-    width: calc(50% - var(--split-width-1200) / 2);
+    width: calc(calc(var(--box-width-1200) - var(--split-width-1200))/2);
   }
 
   .grey-half h1 {
     position: relative;
     left: 16.2%;
-    font-size: 53.5px;
     padding-bottom: 40px;
-    letter-spacing: .5px;
-    word-spacing: -1px;
   }
 
   .grey-half h2 {
     position: relative;
     color: white;
     left: 17%;
-    font-size: 34px;
     padding-bottom: 50px;
-    letter-spacing: 1.1px;
   }
 
   .color-split {
@@ -158,32 +168,51 @@
   }
 
   .green-half {
-    width: calc(50% - var(--split-width-1200) / 2);
+    width: calc(calc(var(--box-width-1200) - var(--split-width-1200))/2);
+  }
+
+  .green-half h1 {
+    position: relative;
+    right: 16.2%;
+    padding-top: 40px;
+  }
+
+  .green-half h2 {
+    position: relative;
+    color: white;
+    right: 17%;
+    padding-top: 50px;
   }
 }
 
 @media (min-width: 1400px) {
   /* Defining for specifically the contact box */
+  .container .container-fluid h1 {
+    font-size: 62px;
+    letter-spacing: .4px;
+    word-spacing: -1px;
+  }
+
+  .container .container-fluid h2 {
+    font-size: 38.2px;
+    letter-spacing: 1.1px;
+  }
+
   .grey-half {
-    width: calc(50% - var(--split-width-1400) / 2);
+    width: calc(calc(var(--box-width-1400) - var(--split-width-1400))/2);
   }
 
   .grey-half h1 {
     position: relative;
     left: 19.5%;
-    font-size: 62px;
     padding-bottom: 40px;
-    letter-spacing: .4px;
-    word-spacing: -1px;
   }
 
   .grey-half h2 {
     position: relative;
     color: white;
     left: 20%;
-    font-size: 38.2px;
     padding-bottom: 50px;
-    letter-spacing: 1.1px;
   }
 
   .color-split {
@@ -192,6 +221,20 @@
   }
 
   .green-half {
-    width: calc(50% + var(--split-width-1400) / 2);
+    width: calc(calc(var(--box-width-1400) - var(--split-width-1400))/2);
   }
+
+  .green-half h1 {
+    position: relative;
+    right: 19.5%;
+    padding-top: 40px;
+  }
+
+  .green-half h2 {
+    position: relative;
+    color: white;
+    right: 20%;
+    padding-top: 50px;
+  }
+
 }
