@@ -46,4 +46,4 @@
 
 // }
 
-window.onresize = set_fade_pos;
+// window.onresize = set_fade_pos;
