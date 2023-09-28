@@ -186,6 +186,21 @@
     letter-spacing: 1.1px;
   }
 
+  .green-half h1 {
+    font-size: 62px;
+    /* padding-top: 40px; */
+    letter-spacing: .4px;
+    word-spacing: -1px;
+  }
+
+  .green-half h2 {
+    color: white;
+    font-size: 38.2px;
+    /* padding-top: 50px; */
+    letter-spacing: 1.1px;
+  }
+
+
   .color-split {
     border-left: var(--split-width-1400) solid gray;
     border-bottom: var(--split-height-1400) solid var(--secondaryGreen);

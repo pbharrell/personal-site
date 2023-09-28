@@ -11,7 +11,7 @@
     background-repeat: repeat-x;
     height: 360px;
     width: max(calc(100%*2), calc(1268px * 3));
-    animation: slide 80s linear infinite;
+    animation: slide 90s linear infinite;
   }
 
 @keyframes slide {

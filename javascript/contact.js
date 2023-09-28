@@ -1,6 +1,4 @@
-let header = document.getElementById("header_line");
-// header.getBoundingClientRect()
-console.log(header.getBoundingClientRect());
+'use strict';
 
 function GetScreenCordinates(obj) {
   var p = {};
@@ -19,35 +17,69 @@ function GetScreenCordinates(obj) {
   return p;
 }
 
-// Getting the grey-half children
-let grey_children = document.getElementsByClassName("grey-half")[0].children;
-let bounding_rects = {};
-let coords = {}
-for (grey_child of grey_children) {
-  bounding_rects[grey_child.localName] = grey_child.getBoundingClientRect();
-  coords[grey_child.localName] = GetScreenCordinates(grey_child);
-  // grey_child.style.position = "absolute"
-}
-console.log(coords);
+function GetSize(obj) {
+  var p = {};
+  var obj_style = getComputedStyle(obj);
 
-// Getting the green-half children
-let green_children = document.getElementsByClassName("green-half")[0].children;
-for (green_child of green_children) {
-  console.log(green_child);
-  if (green_child.localName == "h1") {
-    // console.log(screen.width - bounding_rects["h1"].top);
-    // green_child.offsetLeft = screen.width - bounding_rects["h2"];
+  p.paddingLeft = parseFloat(obj_style.paddingLeft);
+  p.paddingRight = parseFloat(obj_style.paddingRight);
+  p.paddingTop = parseFloat(obj_style.paddingTop);
+  p.paddingBottom = parseFloat(obj_style.paddingBottom);
+
+  p.borderLeft = parseFloat(obj_style.borderLeft);
+  p.borderRight = parseFloat(obj_style.borderRight);
+  p.borderTop = parseFloat(obj_style.borderTop);
+  p.borderBottom = parseFloat(obj_style.borderBottom);
+
+  p.height = obj.offsetHeight - (p.paddingTop + p.paddingBottom) - (p.borderTop + p.borderBottom);
+  p.width = obj.offsetWidth - (p.paddingLeft + p.paddingRight) - (p.borderLeft + p.borderRight);
+  return p;
+}
+
+function MiddleVertAlign(y, h1, h2) {
+  return y + ((h1 - h2) / 2);
+}
+
+function SetContactAlignment() {
+  // Getting the grey-half children
+  let grey_children = document.getElementsByClassName("grey-half")[0].children;
+  let sizes = {};
+  let coords = {}
+  for (let grey_child of grey_children) {
+    // bounding_rects[grey_child.localName] = grey_child.getBoundingClientRect();
+    coords[grey_child.localName] = GetScreenCordinates(grey_child);
+    sizes[grey_child.localName] = GetSize(grey_child);
+    // grey_child.style.position = "absolute"
+  }
+  console.log(coords);
+  console.log(sizes);
+
+  // Getting the green-half children
+  let green_children = document.getElementsByClassName("green-half")[0].children;
+  for (let green_child of green_children) {
+    console.log(green_child);
     green_child.style.position = "absolute";
-    // green_child.style.right = String(bounding_rects["h1"].right)+"px";
-    // console.log($("grey-half").first().position().left);
-    green_child.style.top = String(180 + bounding_rects["h2"].top)+"px";
-    console.log(green_child.style.top);
+    if (green_child.localName == "h1") {
+      let x = String(coords["h2"]["x"]);
+      let y = String(MiddleVertAlign(coords["h2"]["y"], sizes["h2"]["height"], GetSize(green_child)["height"]));
+      green_child.style.right = x +"px";
+      green_child.style.top = y +"px";
+      console.log(green_child.style.top);
+    }
+    else if (green_child.localName == "h2") {
+      let x = String(coords["h1"]["x"]);
+      let y = String(MiddleVertAlign(coords["h1"]["y"], sizes["h1"]["height"], GetSize(green_child)["height"]));
+      green_child.style.right = x +"px";
+      green_child.style.top = y +"px";
+      console.log(green_child.style.top);
+
+    }
+    // offsets[green_child.localName] = green_child.offsetLeft;
   }
-  else if (green_child.localName == "h2") {
-    
-  }
-  // offsets[green_child.localName] = green_child.offsetLeft;
 }
 
+SetContactAlignment();
 
-</script>
+$(window).resize(function() {
+  SetContactAlignment()()
+});
