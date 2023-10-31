@@ -46,15 +46,20 @@ body {
 
 /* Defining navigation bar attributes */
 #page_wrapper {
+    position: relative;
     padding-top: 50px;
     margin-right: 0px;
     width: 100%;
     margin: 0 auto;
     float: right;
+    z-index: -1;
 }
-nav {
+
+#page_wrapper nav .container {
+    display: none;
     width: 100%;
 }
+
 nav ul {
     float: right;
     padding: 0;
@@ -65,15 +70,22 @@ nav ul {
     max-width: 600px;
     margin-bottom: 16px;
 }
-nav ul li a {
+
+header-component ul li a {
     color: var(--headingYellow);
-    font-size: 22px;
     text-decoration: none;
+    font-size: 20px;
 }
+
+header-component nav ul li a {
+    font-size: 22px;
+}
+
 nav li a:hover {
     color: var(--primaryGreen);
 }
-nav li .curr_page {
+
+.curr_page {
     color: var(--selectYellow)
 }
 
@@ -136,6 +148,70 @@ nav li .curr_page {
     background: var(--selectYellow);
 }
 
+/* Defining hamburger menu attributes */
+#hamburger-icon {
+    margin: auto 0;
+    display: block;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#hamburger-icon .box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.open .mobile-menu {
+    display: block;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+
+/* Defining title text attributes */
 .title_text {
     margin-top: max(-2vw, -22px);
     float: right;
@@ -262,6 +338,20 @@ nav li .curr_page {
         width: 720px;
     }
 
+    .content_box .header {
+        padding-left: 70px;
+        padding-top: 10px;
+        margin-bottom: 0px;
+        font-size: 35px;
+    }
+
+    #page_wrapper nav .container {
+        display: block;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
     
     /* Defining the font sizes for the content box */
     .content_box h1 {
@@ -269,7 +359,7 @@ nav li .curr_page {
         color: var(--white);
     }
     .content_box p {
-        font-size: 19px;
+        font-size: 18.7px;
         color: var(--white);
         margin-bottom: 7px;
     }    
@@ -301,7 +391,6 @@ nav li .curr_page {
     #header_line nav ul {
         width: 60%;
     }
-
 
     .content_box .header {
         padding-left: 70px;
