@@ -10,9 +10,13 @@
   --linkedinBlue: #0072b1;
   --githubBlack: #171515;
 
+  --box-width-768: 720px;
+  --split-width-768: 200px;
+  --split-height-768: 240px;
+
   --box-width-992: 960px;
   --split-width-992: 250px;
-  --split-height-992: 350px;
+  --split-height-992: 325px;
 
   --box-width-1200: 1140px;
   --split-width-1200: 350px;
@@ -20,20 +24,15 @@
 
   --box-width-1400: 1320px;
   --split-width-1400: 450px;
-  --split-height-1400: 450px;
+  --split-height-1400: 425px;
 }
 
 @media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
   #contact_line {
     font-size: 81.5px;
   }
 
-  /* Defining for specifically the about box */
+  /* Defining for specifically the contact box */
   .content_box {
     padding: 0px;
   }
@@ -69,6 +68,7 @@
     position: relative;
     left: 15%;
     padding-bottom: 40px;
+    margin: 0px;
   }
 
   .grey-half h2 {
@@ -76,6 +76,7 @@
     color: white;
     left: 15.7%;
     padding-bottom: 50px;
+    margin: 0px;
   }
 
   .color-split {
@@ -98,10 +99,10 @@
     position: relative;
     text-align: right;
     right: 15%;
-    font-size: 48.5px;
     letter-spacing: .5px;
     word-spacing: -1px;
     padding-top: 40px;
+    margin: 0px;
   }
 
   .green-half h2 {
@@ -109,9 +110,9 @@
     text-align: right;
     color: white;
     right: 15.7%;
-    font-size: 29px;
     letter-spacing: 1.1px;
     padding-top: 50px;
+    margin: 0px;
   }
 
   .content_box .header {
@@ -119,10 +120,147 @@
     padding-left: 12px;
   }
 
-  #about_box .container-fluid {
+}
+@media (min-width: 768px) {
+  #contact_line {
+    font-size: 66.6px;
+  }
+
+  /* Defining for specifically the contact box */
+  .container .container-fluid h1 {
+    font-size: 34.5px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
+
+  .container .container-fluid h2 {
+    font-size: 20px;
+    letter-spacing: 1.1px;
+  }
+
+  .grey-half {
+    width: calc(calc(var(--box-width-768) - var(--split-width-768))/2);
+    height: 100%;
+    background-color: grey;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .grey-half h1 {
+    position: relative;
+    left: 15%;
+    padding-bottom: 35px;
+  }
+
+  .grey-half h2 {
+    position: relative;
+    color: white;
+    left: 15.7%;
+    padding-bottom: 30px;
+  }
+
+  .color-split {
+    border-left: var(--split-width-768) solid gray;
+    border-bottom: var(--split-height-768) solid var(--secondaryGreen);
+    height: 0px;
+  }
+
+  .green-half {
+    width: calc(calc(var(--box-width-768) - var(--split-width-768))/2);
+    display: flex;
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .green-half h1 {
+    letter-spacing: .5px;
+    word-spacing: -1px;
     padding-top: 35px;
-    padding-left: 34px;
-    padding-right: 34px;
+  }
+
+  .green-half h2 {
+    letter-spacing: 1.1px;
+    padding-top: 30px;
+  }
+
+  .content_box .header {
+    font-size: 45px;
+    padding-left: 12px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  #contact_line {
+    font-size: 81.5px;
+  }
+
+  /* Defining for specifically the contact box */
+  .container .container-fluid h1 {
+    font-size: 45.5px;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+  }
+
+  .container .container-fluid h2 {
+    font-size: 27px;
+    letter-spacing: 1.1px;
+  }
+
+  .grey-half {
+    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
+    height: 100%;
+    background-color: grey;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .grey-half h1 {
+    position: relative;
+    left: 15%;
+    padding-bottom: 45px;
+  }
+
+  .grey-half h2 {
+    position: relative;
+    color: white;
+    left: 15.7%;
+    padding-bottom: 50px;
+  }
+
+  .color-split {
+    border-left: var(--split-width-992) solid gray;
+    border-bottom: var(--split-height-992) solid var(--secondaryGreen);
+    height: 0px;
+  }
+
+  .green-half {
+    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  /* position handled in contact.js */
+  .green-half h1 {
+    padding-top: 45px;
+  }
+
+  .green-half h2 {
+    padding-top: 50px;
+  }
+
+  .content_box .header {
+    padding-left: 12px;
   }
 }
 @media (min-width: 1200px) {
@@ -150,14 +288,11 @@
   }
 
   .grey-half h1 {
-    position: relative;
     left: 16.2%;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 
   .grey-half h2 {
-    position: relative;
-    color: white;
     left: 17%;
     padding-bottom: 50px;
   }
@@ -171,16 +306,11 @@
     width: calc(calc(var(--box-width-1200) - var(--split-width-1200))/2);
   }
 
+  /* position handled in contact.js */
   .green-half h1 {
-    position: relative;
-    right: 16.2%;
-    padding-top: 40px;
+    padding-top: 50px;
   }
-
   .green-half h2 {
-    position: relative;
-    color: white;
-    right: 17%;
     padding-top: 50px;
   }
 }
@@ -188,7 +318,7 @@
 @media (min-width: 1400px) {
   /* Defining for specifically the contact box */
   .container .container-fluid h1 {
-    font-size: 62px;
+    font-size: 64px;
     letter-spacing: .4px;
     word-spacing: -1px;
   }
@@ -203,32 +333,14 @@
   }
 
   .grey-half h1 {
-    position: relative;
     left: 19.5%;
-    padding-bottom: 40px;
-  }
-
-  .grey-half h2 {
-    position: relative;
-    color: white;
-    left: 20%;
     padding-bottom: 50px;
   }
 
-  .green-half h1 {
-    font-size: 62px;
-    /* padding-top: 40px; */
-    letter-spacing: .4px;
-    word-spacing: -1px;
+  .grey-half h2 {
+    left: 20%;
+    padding-bottom: 50px;
   }
-
-  .green-half h2 {
-    color: white;
-    font-size: 38.2px;
-    /* padding-top: 50px; */
-    letter-spacing: 1.1px;
-  }
-
 
   .color-split {
     border-left: var(--split-width-1400) solid gray;
@@ -239,21 +351,12 @@
     width: calc(calc(var(--box-width-1400) - var(--split-width-1400))/2);
   }
 
+  /* position handled in contact.js */
   .green-half h1 {
-    position: relative;
-    right: 19.5%;
-    padding-top: 40px;
+    padding-top: 50px;
   }
-
   .green-half h2 {
-    position: relative;
-    color: white;
-    right: 20%;
     padding-top: 50px;
   }
 
-}
-
-header-component {
-  height: 500px;
 }

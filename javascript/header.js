@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     constructor() {
       super();
 
-    //   Dictionary of the link values for header line
+    // Dictionary of the link values for header line
       this.links = {
         home: "#",
         experience: "#",
@@ -85,7 +85,7 @@ class Header extends HTMLElement {
                 </div>
             </nav>
         </div>
-        `
+        `;
         // Currently searching for the line where we underline the current page
         let hl_search_string = `<li><div class="${pageName}`
         let add_line_class_pos = header_line_html.search(hl_search_string) + hl_search_string.length;
@@ -100,6 +100,41 @@ class Header extends HTMLElement {
         this.innerHTML = [this.innerHTML, header_line_html].join("");
     }
 
+    // Update the page hamburger menu with what it should be according to current page
+    updateHamburgerMenu(pageName) {
+        let hamburger_menu_html = 
+        `
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="${this.links["home"]}">Home</a></li>
+                <li><a href="${this.links["experience"]}">Experience</a></li>
+                <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
+                <li><a href="${this.links["about"]}">About</a></li>
+                <li><a href="${this.links["contact"]}">Contact</a></li>
+            </ul>
+        </div>
+        `;
+
+        // Currently searching for the line where we highlight the current page in yellow
+        let links_search_string = `<li><a href="${this.links[pageName]}"`;
+        let add_links_class_pos = hamburger_menu_html.search(links_search_string) + links_search_string.length;
+
+        // We print out an error if it was not found
+        if (add_links_class_pos == -1) {
+            console.log("ERROR! Invalid page class name searched for in updateHamburgerMenu().");
+        }
+
+        // Slicing in the curr_page class into the html
+        hamburger_menu_html = [hamburger_menu_html.slice(0, add_links_class_pos), ` class="curr_page"`, hamburger_menu_html.slice(add_links_class_pos)].join("");
+
+        // Adding appending the hamburger menu into the html
+        this.innerHTML = [this.innerHTML, hamburger_menu_html].join("");
+        
+    }
+    
     // Update the page title with what it should be according to which page we are on
     updatePageTitle(pageName) {
         // Defining the title icon
@@ -144,7 +179,7 @@ class Header extends HTMLElement {
         }
 
         // Defining the header trailer here and working in the title line
-        let headerTrailer = 
+        let header_trailer = 
         `
             <div class="outer container">
                 ${title_line}
@@ -155,11 +190,10 @@ class Header extends HTMLElement {
                 <img src="../Assets/Profile_pic_crop.webp" alt="Profile">
             </div>
         </div>
-        `
+        `;
 
         // Slicing in the trailer into the html
-        this.innerHTML = [this.innerHTML, headerTrailer].join("");
-        console.log(this.innerHTML);
+        this.innerHTML = [this.innerHTML, header_trailer].join("");
     }
 
     connectedCallback() {
@@ -168,7 +202,8 @@ class Header extends HTMLElement {
 
         // Constructing the html required for the top line
         this.updatePageLinks(pageName);
-        this.setSelectedPage(pageName);    
+        this.setSelectedPage(pageName);
+        this.updateHamburgerMenu(pageName);
         this.updatePageTitle(pageName);
     }
 
@@ -180,6 +215,11 @@ class Header extends HTMLElement {
             connectedCallback();
         }
     }
+}
+
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open');
+    console.log("clicked");
 }
 
 customElements.define('header-component', Header);

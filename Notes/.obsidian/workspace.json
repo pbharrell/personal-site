@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "bfd0b135ce137b73",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a561d56b6424d40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bc9cf5e97480fbb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI Page Idea.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31e971d408b86584",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Portfolio page ideas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "94c06fef89b66d3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "09963c301cf45a30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2c92055f3f33814",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "beca0a96db494309",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "200e12210ba68b55",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6a7cd13f7845714e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b634b7ad6453833f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8be001b83502ec84",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Portfolio page ideas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "026b8e6cd54acadd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Portfolio page ideas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c4f80484d7192e63",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bb2bb7a616c1fe6d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Portfolio page ideas.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "31e971d408b86584",
+  "lastOpenFiles": [
+    "AI Page Idea.md",
+    "Portfolio page ideas.md"
+  ]
+}
