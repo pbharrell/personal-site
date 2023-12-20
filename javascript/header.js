@@ -104,18 +104,23 @@ class Header extends HTMLElement {
     updateHamburgerMenu(pageName) {
         let hamburger_menu_html = 
         `
-        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-                <li><a href="${this.links["home"]}">Home</a></li>
-                <li><a href="${this.links["experience"]}">Experience</a></li>
-                <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                <li><a href="${this.links["about"]}">About</a></li>
-                <li><a href="${this.links["contact"]}">Contact</a></li>
-            </ul>
-        </div>
+        <!-- <div id="mobile-menu-container" class="container">  -->
+            <div id="mobile-menu-box" class="container" onclick="toggleMobileMenu(this)">
+                <div id="hamburger-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+                <ul class="mobile-menu">
+                        <li><a href="${this.links["home"]}">Home</a></li>
+                        <li><a href="${this.links["experience"]}">Experience</a></li>
+                        <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
+                        <li><a href="${this.links["about"]}">About</a></li>
+                        <li><a href="${this.links["contact"]}">Contact</a></li>
+                </ul>
+            <!-- </div> -->
+        <!-- </div> -->
         `;
 
         // Currently searching for the line where we highlight the current page in yellow
@@ -185,7 +190,7 @@ class Header extends HTMLElement {
                 ${title_line}
             </div>
         </div>
-        <div class="container">
+        <div class="outer_profile_box container">
             <div class="profile_container">
                 <img src="../Assets/Profile_pic_crop.webp" alt="Profile">
             </div>

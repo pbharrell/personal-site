@@ -1,5 +1,6 @@
 /* Styling for Home page */
 .scrolling-image-container {
+    z-index: 0;
     overflow: hidden;
     height: 350px;
     position: relative;
@@ -71,10 +72,11 @@ h4 {
 @media (min-width: 576px) {
     /* Defining the title and subtitle size for different resolutions */
     #home_name_line {
-        margin-bottom: -29px;
+        font-size: 45px;
+        /* margin-bottom: -29px; */
     }
     #home_sub_line {
-        font-size: 15px;
+        display: none;
     }
 
     .content_box .header {
@@ -88,9 +90,10 @@ h4 {
     /* Defining the title and subtitle size for different resolutions */    
     #home_name_line {
         font-size: 73.2px;
-        margin-bottom: 30;
+        margin-bottom: -30px;
     }
     #home_sub_line {
+        display: block;
         font-size: 39.7px;
     }
 
