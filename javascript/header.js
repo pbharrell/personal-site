@@ -105,14 +105,14 @@ class Header extends HTMLElement {
         let hamburger_menu_html = 
         `
         <!-- <div id="mobile-menu-container" class="container">  -->
-            <div id="mobile-menu-box" class="container" onclick="toggleMobileMenu(this)">
-                <div id="hamburger-icon">
+            <div id="mobile-menu-box" class="container">
+                <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
             </div>
-                <ul class="mobile-menu">
+                <ul id="mobile-menu">
                         <li><a href="${this.links["home"]}">Home</a></li>
                         <li><a href="${this.links["experience"]}">Experience</a></li>
                         <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
@@ -222,9 +222,14 @@ class Header extends HTMLElement {
     }
 }
 
-function toggleMobileMenu(menu) {
-    menu.classList.toggle('open');
-    console.log("clicked");
+function toggleMobileMenu(icon) {
+    document.getElementById("mobile-menu").classList.toggle('open');
+
+    // hamburger_icon = document.getElementById("hamburger-icon");
+    // for (bar of hamburger_icon.children) {
+    //     bar.classList.toggle("open");
+    // }
+    icon.classList.toggle('open');
 }
 
 customElements.define('header-component', Header);
