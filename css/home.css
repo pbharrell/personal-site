@@ -1,26 +1,30 @@
 /* Styling for Home page */
-.scrolling-image-container {
+/* Scrolling image box source: https://www.youtube.com/watch?v=nAjR0Oj0J8E */
+.scrolling-image-box {
     z-index: 0;
     overflow: hidden;
-    height: 350px;
     position: relative;
+    height: 270px;
+}
+
+.scrolling-image-wrapper {
+    height: 100%;
+    display: flex;
 }
 
 .scrolling-image {
-    margin-top: -5px;
-    background: url(../Assets/Scroll_image_scaled.png);
+    flex: 1;
     background-repeat: repeat-x;
-    height: 360px;
-    width: max(calc(100%*2), calc(1268px * 3));
-    animation: slide 90s linear infinite;
-  }
+    object-fit: contain;
+    animation: slide 60s linear infinite;
+}
 
 @keyframes slide {
     0% {
-        transform: translate(0);
+        transform: translateX(0);
     }
     100% {
-        transform: translate(calc(-1268px)); /* The image width */
+        transform: translateX(-100%); /* The image width */
     }
 }
 
@@ -38,12 +42,14 @@ div.fade-left {
     display: block;
   
     width: 10%;
-    height: 400px;
+    height: 100%;
   
-    background-image: linear-gradient(to left, 
+    background-image: linear-gradient(
+        to left, 
         rgba(255, 255, 255, 0), 
         rgba(143, 168, 158, 1)
-    100%);
+        100%
+        );
 }
 
 div.fade-right {
@@ -55,12 +61,14 @@ div.fade-right {
     display: block;
   
     width: 10%;
-    height: 400px;
+    height: 100%;
   
-    background-image: linear-gradient(to right, 
+    background-image: linear-gradient(
+        to right, 
         rgba(255, 255, 255, 0), 
         rgba(143, 168, 158, 1)
-    100%);
+        100%
+        );
 }
 
 h4 {
@@ -85,6 +93,13 @@ h4 {
         margin-bottom: 0px;
         font-size: 25px;
     }
+
+    /* .scrolling-image-box {
+        height: 200px;
+    }
+    .scrolling-image {
+        height: 200px;
+    } */
 }
 @media (min-width: 768px) {
     /* Defining the title and subtitle size for different resolutions */    
@@ -109,6 +124,13 @@ h4 {
         margin-right: 45px;
         position: relative;
         display: inline-block;
+    }
+
+    .scrolling-image-box {
+        height: 350px;
+    }
+    .scrolling-image {
+        height: 350px;
     }
 }
 

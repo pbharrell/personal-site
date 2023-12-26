@@ -1,45 +1,5 @@
 'use strict';
 
-function GetScreenCordinates(obj) {
-  var p = {};
-  p.x = obj.offsetLeft;
-  p.y = obj.offsetTop;
-  while (obj.offsetParent) {
-    p.x = p.x + obj.offsetParent.offsetLeft;
-    p.y = p.y + obj.offsetParent.offsetTop;
-    if (obj == document.getElementsByTagName("body")[0]) {
-      break;
-    }
-    else {
-      obj = obj.offsetParent;
-    }
-  }
-  return p;
-}
-
-function GetSize(obj) {
-  var p = {};
-  var obj_style = getComputedStyle(obj);
-
-  p.paddingLeft = parseFloat(obj_style.paddingLeft);
-  p.paddingRight = parseFloat(obj_style.paddingRight);
-  p.paddingTop = parseFloat(obj_style.paddingTop);
-  p.paddingBottom = parseFloat(obj_style.paddingBottom);
-
-  p.borderLeft = parseFloat(obj_style.borderLeft);
-  p.borderRight = parseFloat(obj_style.borderRight);
-  p.borderTop = parseFloat(obj_style.borderTop);
-  p.borderBottom = parseFloat(obj_style.borderBottom);
-
-  p.height = obj.offsetHeight - (p.paddingTop + p.paddingBottom) - (p.borderTop + p.borderBottom);
-  p.width = obj.offsetWidth - (p.paddingLeft + p.paddingRight) - (p.borderLeft + p.borderRight);
-  return p;
-}
-
-function MiddleVertAlign(y, h1, h2) {
-  return y + ((h1 - h2) / 2);
-}
-
 function SetContactAlignment() {
   // Getting the grey-half children
   let grey_children = document.getElementsByClassName("grey-half")[0].children;

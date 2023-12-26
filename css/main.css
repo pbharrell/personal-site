@@ -172,7 +172,7 @@ nav li a:hover {
 }
 
 #mobile-menu-box {
-    padding-top: 100px;
+    padding-top: 50px;
     z-index: 1;
     /* width: 100px;
     height: 100px;
@@ -278,6 +278,7 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
 /* Defining the picture attributes */
 .outer_profile_box {
     position: relative;
+    padding-right: 200px;
 }
 
 .profile_container {
@@ -287,7 +288,7 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     right: 0px;
     position: absolute;
     /*left: 0;
-    right: 0;
+    right: 0px;
     margin-left: auto;
     margin-right: auto; */
     overflow: hidden;
@@ -399,6 +400,10 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     /* The manually defined Bootstrap container */
     .container-spacing {
         width: 720px;
+    }
+
+    #mobile-menu-box {
+        padding-top: 100px;
     }
 
     .content_box .header {
