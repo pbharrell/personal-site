@@ -201,13 +201,13 @@ nav li a:hover {
 Example from here
 https://www.w3schools.com/howto/howto_js_sidenav.asp
  */
- #mobile-menu {
+ /* #mobile-menu {
     /* position: block;
     float: left;
     width: fit-content;
     height: fit-content; */
     /* z-index: 1; */
-    height: 100%;
+   /*height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -217,18 +217,9 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     overflow-x: hidden;
     padding-top: 100px;
     transition: .5s;
-}
+} */
 
-.open .mobile-menu {
-    display: block;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.mobile-menu {
+#mobile-menu {
     display: none;
     position: absolute;
     top: 50px;
@@ -237,6 +228,30 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     background-color: white;
     /* height: calc(100vh - 50px); */
     width: 100%;
+}
+
+#mobile-menu.open {
+    display: block;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    /* float: left; */
+    /* width: fit-content;
+    height: fit-content;
+    z-index: 1;
+    height: 100%;
+    /* width: 0; */
+    position: fixed;
+    /*z-index: 1;*/
+    top: 100px;
+    /* left: 50px; */
+    background-color: #111;
+    /* overflow-x: hidden; */
+    padding-top: 100px;
+    transition: .5s; */
 }
 
 .mobile-menu li {
