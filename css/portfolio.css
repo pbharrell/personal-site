@@ -1,8 +1,14 @@
+#portfolio_line {
+    font-size: 26px;
+    padding-left: 2px;
+}
+
 .portfolio_image {
     width: 100%;
 }
 
-#portfolio_box .container-fluid {
+#portfolio_box .container {
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 
@@ -12,38 +18,58 @@
 
 #portfolio_box .portfolio_title {
     text-align: center;
-}    
+}
+
+#portfolio_box .portfolio_image {
+    border-radius: 9%;
+    border: .20rem solid;
+    border-color: #4c8970;
+}
+
+#portfolio_box .col-md-6 {
+    margin-top: 15px;
+}
 
 
 @media (min-width: 576px) {
-    #experience_line {
-        font-size: 15px;
+    #portfolio_line {
+        font-size: 42px;
     }
 
     /* Defining for specifically the project portfolio box */
-    #garmin_title {
-        padding-top: 60px;
+    #portfolio_box .container {
+        padding-top: 5px;
     }
-    #consumers_title {
-        padding-top: 103px;
+
+    #portfolio_box .portfolio_image {
+        border: .30rem solid;
+        border-color: #4c8970;
+    }
+
+    #portfolio_box .col-md-6 {
+        margin-top: 20px;
     }    
 }
 @media (min-width: 768px) {
+    #title_profile_wrapper {
+        margin-bottom: -155px;
+    }
+
     #portfolio_line {
         font-size: 69.2px;
     }
 
-    #portfolio_box .container-fluid {
+    #portfolio_box .container {
         padding-top: 20px;
     }
 
     /* Defining for specifically the project portfolio box */
     #portfolio_box .portfolio_image {
-        border: .30rem solid;
+        border: .10rem solid;
         border-color: #4c8970;
-    }    
+    }
 
-    #portfolio_box .container-fluid .following_row {
+    #portfolio_box .container .following_row {
         padding-top: 14px;
     }
 }
@@ -54,17 +80,16 @@
 
     /* Defining for specifically the project portfolio box */
     #portfolio_box .portfolio_image {
-        border: .35rem solid;
-        border-radius: .7%;
+        border: .2rem solid;
         border-color: #4c8970;
     }    
 
-    #portfolio_box .container-fluid {
+    #portfolio_box .container {
         padding-top: 35px;
         padding-left: 34px;
         padding-right: 34px;
     }
-    #portfolio_box .container-fluid .following_row {
+    #portfolio_box .container .following_row {
         padding-top: 18px;
     }
 }
@@ -75,16 +100,16 @@
 
     /* Defining for specifically the project portfolio box */
     #portfolio_box .portfolio_image {
-        border: .45rem solid;
+        border: .3rem solid;
         border-color: #4c8970;
     }    
 
-    #portfolio_box .container-fluid {
+    #portfolio_box .container {
         padding-top: 40px;
         padding-left: 50px;
         padding-right: 50px;
     }
-    #portfolio_box .container-fluid .following_row {
+    #portfolio_box .container .following_row {
         padding-top: 20px;
     }
 }
@@ -97,18 +122,18 @@
 
     /* Defining for specifically the project portfolio box */
     #portfolio_box .portfolio_image {
-        border: .55rem solid;
+        border: .4rem solid;
         border-color: #4c8970;
     }    
 
-    #portfolio_box .container-fluid {
+    #portfolio_box .container {
         padding-top: 50px;
         padding-left: 80px;
         padding-right: 80px;
     }
 
 
-    #portfolio_box .container-fluid .following_row {
+    #portfolio_box .container .following_row {
         padding-top: 30px;
     }
 }

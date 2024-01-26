@@ -51,16 +51,19 @@ body {
     margin-right: 0px;
     width: 100%;
     margin: 0 auto;
-    float: right;
+    z-index: 1;
+    display: none;
 }
 
 #page_wrapper nav .container {
-    display: none;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul {
-    float: right;
+    position: relative;
+    right: 0px;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -90,7 +93,6 @@ nav li a:hover {
 
 /* Defining header line w/ selected line */
 #header_line {
-    float: right;
     position: static;
     width: 100%;
     height: auto;
@@ -106,7 +108,6 @@ nav li a:hover {
 #header_line nav ul {
     margin-bottom: 0;
     height: 7px;
-    float: right;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -155,12 +156,15 @@ nav li a:hover {
     height: fit-content;
     z-index: 1;
 }
+
+#hamburger-icon-wrapper {
+    cursor: pointer;
+}
+
 #hamburger-icon {
-    /* margin: auto 0; */
     width: fit-content;
     display: block;
     position: relative;
-    cursor: pointer;
 }
 
 #hamburger-icon div {
@@ -171,15 +175,35 @@ nav li a:hover {
     transition: .3s;
 }
 
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 #mobile-menu-box {
-    padding-top: 50px;
-    z-index: 1;
-    /* width: 100px;
-    height: 100px;
+    padding: 10px 0px;
+    margin-bottom: 60px;
+    top: 30px;
+    position: relative;
     width: 100%;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s; */
+    z-index: 1;
+    background-color: rgb(205, 202, 202);
+    /* background-color: var(--secondaryGreen); */
+    border-top: 2.5px solid var(--primaryGreen);
+    border-bottom: 2.5px solid var(--primaryGreen);
+    /* border-radius: 20px; */
+    display: none;
+}
+
+#mobile-menu-box.open {
+    display: block;
+}
+
+#mobile-menu-box .container {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -201,82 +225,70 @@ nav li a:hover {
 Example from here
 https://www.w3schools.com/howto/howto_js_sidenav.asp
  */
- /* #mobile-menu {
-    /* position: block;
-    float: left;
-    width: fit-content;
-    height: fit-content; */
-    /* z-index: 1; */
-   /*height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 100px;
-    transition: .5s;
-} */
-
 #mobile-menu {
     display: none;
-    position: absolute;
-    top: 50px;
+    position: relative;
     left: 0;
     padding: 0px;
-    background-color: white;
-    /* height: calc(100vh - 50px); */
+    margin: 0px;
     width: 100%;
+    list-style: none;
 }
 
-#mobile-menu.open {
+.open #mobile-menu {
     display: block;
-    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-
-    /* float: left; */
-    /* width: fit-content;
-    height: fit-content;
     z-index: 1;
-    height: 100%;
-    /* width: 0; */
-    position: fixed;
-    /*z-index: 1;*/
-    top: 100px;
-    /* left: 50px; */
-    background-color: #111;
-    /* overflow-x: hidden; */
-    padding-top: 100px;
-    transition: .5s; */
 }
 
-.mobile-menu li {
-    /* font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 40px; */
-    padding: 8px 8px 8px 32px;
+#mobile-menu li {
     text-decoration: none;
-    font-size: 25px;
+    text-align: center;
+    /* border-bottom: .5px solid #d9d4d4; Adjust the color and style as needed */
+    padding-bottom: 5px;
     color: #818181;
     display: block;
-    transition: 0.3s;
 }
 
+#mobile-menu li a {
+    font-size: 23px;
+    text-align: center;
+    /* color: ; */
+}
+
+#mobile-menu li a.curr_page {
+    font-size: 23px;
+    text-align: center;
+    color: var(--primaryGreen);
+}
+
+#title_profile_container {
+    top: 10px;
+    position: relative;
+    margin-bottom: -35px;
+}
+
+#title_profile_wrapper {
+    height: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
 
 /* Defining title text attributes */
-.outer {
+#title_wrapper {
     position: relative;
-    bottom: 20px;
-    right: 50px;
+    z-index: 2;
 }
 
 .title_text {
-    margin-top: max(-2vw, -22px);
-    float: right;
     color: var(--primaryGreen);
 }
 
@@ -285,33 +297,29 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
 }
 
 .subheader_text {
-    float: right;
-    clear: right;
     color: var(--headingYellow);
 }
 
 /* Defining the picture attributes */
-.outer_profile_box {
+#profile_box_wrapper {
     position: relative;
-    padding-right: 200px;
+    height: fit-content;
+    width: fit-content;
+    /* top: 10px; */
+    z-index: 2;
 }
 
-.profile_container {
-    width: 140px;
-    height: 140px;
-    top: -80px;
+#profile_container {
     right: 0px;
-    position: absolute;
-    /*left: 0;
-    right: 0px;
-    margin-left: auto;
-    margin-right: auto; */
+    position: relative;
     overflow: hidden;
     border-radius: 50%;
     border: solid var(--primaryGreen) 1.75px;
+    width: 120px;
+    height: 120px;
 }
 
-.profile_container img {
+#profile_container img {
     width: 100%;
     height: 100%;
 }
@@ -349,31 +357,47 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     color: white;
 }
 
+.content_box p {
+    font-size: 19px;
+    color: var(--white);
+}
+
 #social_media_box div {
     border-radius: 15px;
     align-items: center;
 }  
+
 #social_media_box div div div {
     display: flex;
     justify-content: center;
 
 }
+
+#social_media_box div div div a {
+    font-size: 40px;
+}
+
 #social_media_box div div div a.bi-facebook {
     color: var(--facebookBlue);
 }
+
 #social_media_box div div div a.bi-instagram {
     color: var(--instagramPink);
-}    
+}  
+
 #social_media_box div div div a.bi-linkedin {
     color: var(--linkedinBlue);
-}    
+}  
+
 #social_media_box div div div a.bi-github {
     color: var(--linkedinBlack);
 }
+
 #social_media_box div div div a.btn {
     color: white;
-}    
-
+    font-size: 20px;
+    line-height: 105%;
+}
 
 @media (min-width: 576px) {
     /* The manually defined Bootstrap container */
@@ -387,38 +411,50 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
         color: var(--white);
     }
     .content_box p {
-        font-size: 30px;
+        font-size: 20px;
         color: var(--white);
     }
 
     /* Profile container sizing per resolution */
-    .profile_container {
-        width: 150px;
-        height: 150px;
+    #profile_container {
+        width: 135px;
+        height: 135px;
     }
+
+    #mobile-menu-box {
+        margin-bottom: 60px;
+        top: 30px;
+    }    
 
     /* Social media box sizing per resolution */
     #social_media_box div div div a {
         font-size: 50px;
     }
+    
     #social_media_box div div div a.btn {
-        font-size: 20px;
-    }    
+    font-size: 23px;
+    line-height: 105%;
+    }
+    
 }
 @media (min-width: 768px) {
-    .outer {
-        position: block;
-        bottom: 0px;
+    #title_profile_wrapper {
+        flex-direction: row-reverse;
+        align-items: normal;
+    }
+
+    #title_wrapper {
+        top: 20px;
         right: 0px;
+    }
+
+    #profile_box_wrapper {
+        top: -25px;
     }
 
     /* The manually defined Bootstrap container */
     .container-spacing {
         width: 720px;
-    }
-
-    #mobile-menu-box {
-        padding-top: 100px;
     }
 
     .content_box .header {
@@ -428,8 +464,12 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
         font-size: 35px;
     }
 
-    #page_wrapper nav .container {
+    #page_wrapper {
         display: block;
+    }
+
+    #hamburger-icon-wrapper {
+        display: none;
     }
 
     #hamburger-icon {
@@ -440,9 +480,13 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
         display: block;
     }
 
-    /* #header_line nav ul li .selected {
-        display: block;
-    } */
+    #mobile-menu-box {
+        display: none;
+    }
+
+    #title_profile_container {
+        top: -50px;
+    }    
     
     /* Defining the font sizes for the content box */
     .content_box h1 {
@@ -450,14 +494,14 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
         color: var(--white);
     }
     .content_box p {
-        font-size: 18.7px;
+        font-size: 26px;
         color: var(--white);
         margin-bottom: 7px;
     }    
 
     /* Profile container sizing per resolution */
-    .profile_container {
-        top: -50px;
+    #profile_container {
+        top: -10px;
         left: 0px;
         width: 180px;
         height: 180px;
@@ -469,6 +513,8 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     }
     #social_media_box div div div a.btn {
         font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }    
 }
 @media (min-width: 992px) {
@@ -485,19 +531,6 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
         width: 60%;
     }
 
-    .content_box .header {
-        padding-left: 70px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 45px;
-    }
-    .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 80px;
-        position: relative;
-        display: inline-block;
-    }
-
     /* Defining the font sizes for the content box */
     .content_box h1 {
         font-size: 39px;
@@ -509,7 +542,7 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     }
 
     /* Profile container sizing per resolution */
-    .profile_container {
+    #profile_container {
         width: 220px;
         height: 220px;
     }
@@ -541,7 +574,7 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     }
 
     /* Profile container sizing per resolution */
-    .profile_container {
+    #profile_container {
         width: 230px;
         height: 230px;
     }

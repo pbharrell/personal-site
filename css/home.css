@@ -1,4 +1,9 @@
 /* Styling for Home page */
+#home_name_line {
+    font-size: 28px;
+    padding-left: 2px;
+}
+
 /* Scrolling image box source: https://www.youtube.com/watch?v=nAjR0Oj0J8E */
 .scrolling-image-box {
     z-index: 0;
@@ -26,6 +31,10 @@
     100% {
         transform: translateX(-100%); /* The image width */
     }
+}
+
+#home_sub_line {
+    display: none;
 }
 
 div.block-left {
@@ -71,37 +80,65 @@ div.fade-right {
         );
 }
 
-h4 {
-    font-size: max(min(3vw, 30px), 25px);
-    text-align: right;
+.content_box .header {
+    text-align: center;
+    padding-top: 25px;
+    margin: 0px;
     color: white;
+}
+
+.content_box .header h1 {
+    font-size: 33px;
+}
+
+.content_box .subheader {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: white;
+}
+
+.content_box .subheader h4 {
+    font-size: 25px;
 }
 
 @media (min-width: 576px) {
     /* Defining the title and subtitle size for different resolutions */
     #home_name_line {
         font-size: 45px;
-        /* margin-bottom: -29px; */
-    }
-    #home_sub_line {
-        display: none;
     }
 
     .content_box .header {
-        padding-left: 60px;
-        padding-top: 15px;
+        display: flex;
+        justify-content: left;
+        padding-top: 25px;
+        padding-left: 25px;
         margin-bottom: 0px;
-        font-size: 25px;
     }
 
-    /* .scrolling-image-box {
-        height: 200px;
+    .content_box .header h1 {
+        font-size: 40px;
     }
-    .scrolling-image {
-        height: 200px;
-    } */
+
+    .content_box .subheader {
+        display: flex;
+        justify-content: right;
+        text-align: right;
+        padding-right: 25px;
+        padding-bottom: 20px;
+    }
+
+    .content_box .subheader h4 {
+        width: 85%;
+        font-size: 32px;
+    }
 }
 @media (min-width: 768px) {
+    #title_profile_wrapper {
+        margin-bottom: -110px;
+    }
+
     /* Defining the title and subtitle size for different resolutions */    
     #home_name_line {
         font-size: 73.2px;
@@ -113,17 +150,26 @@ h4 {
     }
 
     /* Defining the header and subheader used on the homepage specifically */
+    .content_box {
+        margin-top: 45px;
+    }    
+
     .content_box .header {
         padding-left: 50px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 42px;
+        padding-top: 25px;
     }
+
+    .content_box .header h1 {
+        font-size: 50px;
+    }
+
     .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 45px;
-        position: relative;
-        display: inline-block;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+
+    .content_box .subheader h4 {
+        font-size: 38px;
     }
 
     .scrolling-image-box {
@@ -145,16 +191,19 @@ h4 {
 
     /* Defining the header and subheader used on the homepage specifically */
     .content_box .header {
-        padding-left: 70px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 45px;
+        padding-top: 25px;
     }
+
+    .content_box .header h1 {
+        font-size: 55px;
+    }
+
     .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 80px;
-        position: relative;
-        display: inline-block;
+        padding-bottom: 25px;
+    }
+
+    .content_box .subheader h4 {
+        font-size: 33px;
     }
 }
 @media (min-width: 1200px) {
@@ -168,18 +217,10 @@ h4 {
     }
 
     /* Defining the header and subheader used on the homepage specifically */
-    .content_box .header {
-        padding-left: 85px;
-        padding-top: 15px;
-        margin-bottom: 0px;
-        font-size: 55px;
+    .content_box .subheader h4 {
+        font-size: 38px;
     }
-    .content_box .subheader {
-        margin-top: 10px;
-        margin-right: 100px;
-        position: relative;
-        display: inline-block;
-    }    
+
 }
 
 

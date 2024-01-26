@@ -12,51 +12,55 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/about.css">
-    <script src="../javascript/header.js" type="text/javascript" defer></script>
   </head>
   <body class="light-theme">
     <!-- Header line defined in header.js -->
     <header-component pageName="about"></header-component>
-    <div class="about-header container">
-      <div class="row gx-0">
-        <div class="intro-text col-md-7">
-          <h1>Hey!</h1>
-          <h2>
-            I'm <span style="color:#147385">Preston</span>
-          </h2>
-          <p>I like to write <span style="color:#EBD723">code</span> and<br>
-            do <span style="color:#EB3B17">fun</span> things with<br>
-            <span style="color:#1aac4d;">electronics</span>.
-          </p>
-        </div>
-        <div class="intro-image col-md-5">
-          <img src="../Assets/w_picture.jpeg">
+
+    <div id="main">
+      <div class="about-header container">
+        <div class="about-box row">
+          <div class="intro-text col-md-7">
+            <h1>Hey!</h1>
+            <h2>
+              I'm <span style="color:#147385">Preston</span>
+            </h2>
+            <p>I like to write <span style="color:#EBD723">code</span> and<br>
+              do <span style="color:#EB3B17">fun</span> things with<br>
+              <span style="color:#1aac4d;">electronics</span>.
+            </p>
+          </div>
+          <div class="intro-image col-md-5">
+            <img src="../Assets/w_picture.jpeg">
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- About Box -->
-    <div class="container content_box">
-      <div class="container-fluid">
-        <div class="row">
-          <h1 class="header">A little bit about me...</h1>
-        </div>
-        <div class="row">
-          <p>I am a computer science graduate from Michigan State University. I focused on back-end development during 
-            my degree program, but I have recently found love for full-stack development! I am somebody who loves to pick up
-            new skills (coding-related or otherwise) and consider myself an ambitious lifelong learner.
-            <br><br>
-            As far as my interests go, I love to exercise! I grew up as a competetive swimmer and was a proud member and coach of
-            the MSU swim club during my college years. These days I enjoy running - my favorite distance being the half marathon.
-            <br><br>
-            On the more creative side, I am proficient in speaking German and spent six weeks studying abroad while living with a host family in 
-            a small German town called Mayen. While I was there I became comfortable speaking German with locals and handling the discomfort that 
-            comes with being a visitor in a foreign country.
-            <br><br>
-            As a person, I consider myself inherently interested in many different areas who is happy learning about and working on any number 
-            of different topics. If you have any personal or professional inquiries - or just want to say hello and get to know me - you can 
-            reach me over email with the address below. I look forward to speaking with you.
-          </p>
+      <!-- About Box -->
+      <div class="container page_content">
+        <div class="content_box">
+          <div class="container-fluid">
+            <div class="row">
+              <h1 class="header">A little bit about me...</h1>
+            </div>
+            <div class="row">
+              <p>I am a computer science graduate from Michigan State University. I focused on back-end development during 
+                my degree program, but I have recently found love for full-stack development! I am somebody who loves to pick up
+                new skills (coding-related or otherwise) and consider myself an ambitious lifelong learner.
+                <br><br>
+                As far as my interests go, I love to exercise! I grew up as a competetive swimmer and was a proud member and coach of
+                the MSU swim club during my college years. These days I enjoy running - my favorite distance being the half marathon.
+                <br><br>
+                On the more creative side, I am proficient in speaking German and spent six weeks studying abroad while living with a host family in 
+                a small German town called Mayen. While I was there I became comfortable speaking German with locals and handling the discomfort that 
+                comes with being a visitor in a foreign country.
+                <br><br>
+                As a person, I consider myself inherently interested in many different areas who is happy learning about and working on any number 
+                of different topics. If you have any personal or professional inquiries - or just want to say hello and get to know me - you can 
+                reach me over email with the address below. I look forward to speaking with you.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -67,9 +71,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- putting this at the end of body allows all preceeding page
-         information to load on the page before loading script :) -->
-    <script src="javascript/app.js"></script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="../javascript/header.js" type="text/javascript"></script>
   </body>
 </html>

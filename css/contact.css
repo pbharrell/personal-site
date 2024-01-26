@@ -10,15 +10,15 @@
   --linkedinBlue: #0072b1;
   --githubBlack: #171515;
 
-  --box-width-768: 720px;
+  --box-width-768: 696px;
   --split-width-768: 200px;
   --split-height-768: 240px;
 
-  --box-width-992: 960px;
+  --box-width-992: 936px;
   --split-width-992: 250px;
   --split-height-992: 325px;
 
-  --box-width-1200: 1140px;
+  --box-width-1200: 1116px;
   --split-width-1200: 350px;
   --split-height-1200: 400px;
 
@@ -27,38 +27,157 @@
   --split-height-1400: 425px;
 }
 
+#title_profile_wrapper {
+  margin-bottom: -40px;
+}
+
+#contact_line {
+  font-size: 25px;
+}
+
+.content_box .color-split-wrapper {
+  margin: 0px;
+  padding: 0px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .color-split-wrapper h1 {
+  padding-top: 0px;
+  font-size: 30px;
+  letter-spacing: .5px;
+  word-spacing: -1px;
+}
+
+.container .color-split-wrapper h2 {
+  font-size: 21px;
+  letter-spacing: 1.1px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.grey-half {
+  width: 100%;
+  height: 50%;
+  border-radius: 30px 30px 0 0;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.grey-half h1 {
+  position: relative;
+  margin: 0px;
+  font-size: 50px;
+  width: fit-content;
+}
+
+.grey-half h2 {
+  position: relative;
+  color: white;
+  margin: 0px;
+  width: fit-content;
+}
+
+.color-split {
+  display: none;
+}
+
+.green-half {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.green-half h1 {
+  position: relative;
+  text-align: right;
+  /* right: 15%; */
+  letter-spacing: .5px;
+  word-spacing: -1px;
+  padding-top: 40px;
+  margin: 0px;
+  width: fit-content;
+}
+
+.green-half h2 {
+  position: relative;
+  text-align: right;
+  color: white;
+  letter-spacing: 1.1px;
+  width: fit-content;
+}
+
+.content_box .header {
+  font-size: 45px;
+  padding-left: 12px;
+}
+
+#social_media_box {
+  margin-top: 10px;
+}
+
 @media (min-width: 576px) {
+  #title_profile_wrapper {
+    margin-bottom: -45px;
+  }
+
   #contact_line {
-    font-size: 81.5px;
+    font-size: 45px;
   }
 
   /* Defining for specifically the contact box */
-  .content_box {
+  .container .color-split-wrapper {
+    height: 400px;
+  }
+
+  .container .color-split-wrapper h1 {
+    font-size: 38px;
+  }
+
+  .container .color-split-wrapper h2 {
+    font-size: 26px;
+    padding-top: 12px;
+  }
+
+  #social_media_box {
+    margin-top: 10px;
+  }
+  
+  /*.content_box {
     padding: 0px;
   }
 
-  .content_box .container-fluid {
+  .content_box .color-split-wrapper {
     margin: 0px;
     padding: 0px;
     display: flex;
+    flex-direction: column;
   }
 
-  .container .container-fluid h1 {
+  .container .color-split-wrapper h1 {
     font-size: 48.5px;
     letter-spacing: .5px;
     word-spacing: -1px;
   }
 
-  .container .container-fluid h2 {
+  .container .color-split-wrapper h2 {
     font-size: 29px;
     letter-spacing: 1.1px;
   }
 
   .grey-half {
-    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
-    height: 100%;
+    width: 100%;
+    height: 100px;
     background-color: grey;
-    border-radius: 30px 0 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,79 +185,101 @@
   }
   .grey-half h1 {
     position: relative;
-    left: 15%;
-    padding-bottom: 40px;
+    /* left: 15%; */
+    /*padding-bottom: 40px;
     margin: 0px;
   }
 
   .grey-half h2 {
     position: relative;
     color: white;
-    left: 15.7%;
-    padding-bottom: 50px;
+    /* left: 15.7%; */
+    /*padding-bottom: 50px;
     margin: 0px;
   }
 
-  .color-split {
-    border-left: var(--split-width-992) solid gray;
-    border-bottom: var(--split-height-992) solid var(--secondaryGreen);
-    height: 0px;
-  }
-
   .green-half {
-    width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
-    display: flex;
+    width: 100%;
+    height: 100px;
     display: flex;
     align-items: right;
     flex-direction: column;
     justify-content: center;
     white-space: nowrap;
   }
-
+*/
+/*
   .green-half h1 {
     position: relative;
     text-align: right;
-    right: 15%;
+    /* right: 15%; */
+    /*
     letter-spacing: .5px;
     word-spacing: -1px;
     padding-top: 40px;
     margin: 0px;
   }
-
+/*
   .green-half h2 {
     position: relative;
     text-align: right;
     color: white;
-    right: 15.7%;
+    /* right: 15.7%; */
+    /*
     letter-spacing: 1.1px;
     padding-top: 50px;
     margin: 0px;
   }
-
+/*
   .content_box .header {
     font-size: 45px;
     padding-left: 12px;
-  }
+  }*/
 
 }
+
 @media (min-width: 768px) {
+  #title_profile_wrapper {
+    margin-bottom: -145px;
+  }
+
   #contact_line {
     font-size: 66.6px;
   }
 
   /* Defining for specifically the contact box */
-  .container .container-fluid h1 {
+  /* .container .color-split-wrapper .green-half h1 {
+    padding: inherit;
+  } */
+
+  .color-split-wrapper h1 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .color-split-wrapper h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .content_box .color-split-wrapper {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .container .color-split-wrapper h1 {
     font-size: 34.5px;
     letter-spacing: .5px;
     word-spacing: -1px;
   }
 
-  .container .container-fluid h2 {
+  .container .color-split-wrapper h2 {
     font-size: 20px;
     letter-spacing: 1.1px;
+    margin: 0;
   }
 
-  .grey-half {
+  .container .color-split-wrapper .grey-half {
     width: calc(calc(var(--box-width-768) - var(--split-width-768))/2);
     height: 100%;
     background-color: grey;
@@ -146,15 +287,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: baseline;
     white-space: nowrap;
   }
-  .grey-half h1 {
+
+  .container .color-split-wrapper .grey-half h1 {
     position: relative;
     left: 15%;
     padding-bottom: 35px;
   }
 
-  .grey-half h2 {
+  .container .color-split-wrapper .grey-half h2 {
     position: relative;
     color: white;
     left: 15.7%;
@@ -162,14 +305,15 @@
   }
 
   .color-split {
+    display: block;
     border-left: var(--split-width-768) solid gray;
     border-bottom: var(--split-height-768) solid var(--secondaryGreen);
     height: 0px;
   }
 
-  .green-half {
+  .container .color-split-wrapper .green-half {
     width: calc(calc(var(--box-width-768) - var(--split-width-768))/2);
-    display: flex;
+    height: 100%;
     display: flex;
     align-items: right;
     flex-direction: column;
@@ -177,13 +321,13 @@
     white-space: nowrap;
   }
 
-  .green-half h1 {
+  .container .color-split-wrapper .green-half h1 {
     letter-spacing: .5px;
     word-spacing: -1px;
     padding-top: 35px;
   }
 
-  .green-half h2 {
+  .container .color-split-wrapper .green-half h2 {
     letter-spacing: 1.1px;
     padding-top: 30px;
   }
@@ -192,43 +336,41 @@
     font-size: 45px;
     padding-left: 12px;
   }
-
 }
 
 @media (min-width: 992px) {
+  #title_profile_wrapper {
+    margin-bottom: -165px;
+  }
+
   #contact_line {
     font-size: 81.5px;
   }
 
   /* Defining for specifically the contact box */
-  .container .container-fluid h1 {
+  .container .color-split-wrapper h1 {
     font-size: 45.5px;
     letter-spacing: .5px;
     word-spacing: -1px;
   }
 
-  .container .container-fluid h2 {
+  .container .color-split-wrapper h2 {
     font-size: 27px;
     letter-spacing: 1.1px;
   }
 
-  .grey-half {
+  .container .color-split-wrapper .grey-half {
     width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
     height: 100%;
     background-color: grey;
-    border-radius: 30px 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    white-space: nowrap;
   }
-  .grey-half h1 {
+  .container .color-split-wrapper .grey-half h1 {
     position: relative;
     left: 15%;
     padding-bottom: 45px;
   }
 
-  .grey-half h2 {
+  .container .color-split-wrapper .grey-half h2 {
     position: relative;
     color: white;
     left: 15.7%;
@@ -241,7 +383,7 @@
     height: 0px;
   }
 
-  .green-half {
+  .container .color-split-wrapper .green-half {
     width: calc(calc(var(--box-width-992) - var(--split-width-992))/2);
     display: flex;
     align-items: right;
@@ -251,11 +393,11 @@
   }
 
   /* position handled in contact.js */
-  .green-half h1 {
+  .container .color-split-wrapper .green-half h1 {
     padding-top: 45px;
   }
 
-  .green-half h2 {
+  .container .color-split-wrapper .green-half h2 {
     padding-top: 50px;
   }
 
@@ -272,27 +414,27 @@
     --split-width: 350px;
   }
 
-  .container .container-fluid h1 {
+  .container .color-split-wrapper h1 {
     font-size: 53.5px;
     letter-spacing: .5px;
     word-spacing: -1px;
   }
 
-  .container .container-fluid h2 {
+  .container .color-split-wrapper h2 {
     font-size: 34px;
     letter-spacing: 1.1px;
   }
 
-  .grey-half {
+  .container .color-split-wrapper .grey-half {
     width: calc(calc(var(--box-width-1200) - var(--split-width-1200))/2);
   }
 
-  .grey-half h1 {
+  .container .color-split-wrapper .grey-half h1 {
     left: 16.2%;
     padding-bottom: 50px;
   }
 
-  .grey-half h2 {
+  .container .color-split-wrapper .grey-half h2 {
     left: 17%;
     padding-bottom: 50px;
   }
@@ -302,42 +444,42 @@
     border-bottom: var(--split-height-1200) solid var(--secondaryGreen);
   }
 
-  .green-half {
+  .container .color-split-wrapper .green-half {
     width: calc(calc(var(--box-width-1200) - var(--split-width-1200))/2);
   }
 
   /* position handled in contact.js */
-  .green-half h1 {
+  .container .color-split-wrapper .green-half h1 {
     padding-top: 50px;
   }
-  .green-half h2 {
+  .container .color-split-wrapper .green-half h2 {
     padding-top: 50px;
   }
 }
 
 @media (min-width: 1400px) {
   /* Defining for specifically the contact box */
-  .container .container-fluid h1 {
+  .container .color-split-wrapper h1 {
     font-size: 64px;
     letter-spacing: .4px;
     word-spacing: -1px;
   }
 
-  .container .container-fluid h2 {
+  .container .color-split-wrapper h2 {
     font-size: 38.2px;
     letter-spacing: 1.1px;
   }
 
-  .grey-half {
+  .container .color-split-wrapper .grey-half {
     width: calc(calc(var(--box-width-1400) - var(--split-width-1400))/2);
   }
 
-  .grey-half h1 {
+  .container .color-split-wrapper .grey-half h1 {
     left: 19.5%;
     padding-bottom: 50px;
   }
 
-  .grey-half h2 {
+  .container .color-split-wrapper .grey-half h2 {
     left: 20%;
     padding-bottom: 50px;
   }
@@ -347,15 +489,15 @@
     border-bottom: var(--split-height-1400) solid var(--secondaryGreen);
   }
 
-  .green-half {
+  .container .color-split-wrapper .green-half {
     width: calc(calc(var(--box-width-1400) - var(--split-width-1400))/2);
   }
 
   /* position handled in contact.js */
-  .green-half h1 {
+  .container .color-split-wrapper .green-half h1 {
     padding-top: 50px;
   }
-  .green-half h2 {
+  .container .color-split-wrapper .green-half h2 {
     padding-top: 50px;
   }
 

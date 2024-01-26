@@ -4,7 +4,7 @@ function SetContactAlignment() {
   // Getting the grey-half children
   let grey_children = document.getElementsByClassName("grey-half")[0].children;
   let sizes = {};
-  let coords = {}
+  let coords = {};
   for (let grey_child of grey_children) {
     // bounding_rects[grey_child.localName] = grey_child.getBoundingClientRect();
     coords[grey_child.localName] = GetScreenCordinates(grey_child);
@@ -31,8 +31,26 @@ function SetContactAlignment() {
   }
 }
 
-SetContactAlignment();
+function ClearContactAlignment() {
+  // Getting the green-half children
+  let green_children = document.getElementsByClassName("green-half")[0].children;
+  for (let green_child of green_children) {
+    green_child.style = "";
+  }
+}
+
+viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+console.log(viewportWidth);
+if (viewportWidth >= 768) {
+  SetContactAlignment();
+}
 
 $(window).resize(function() {
-  SetContactAlignment();
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth >= 768) {
+      SetContactAlignment();
+    }
+    else {
+      ClearContactAlignment();
+    }
 });
