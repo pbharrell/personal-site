@@ -398,6 +398,12 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
     font-size: 20px;
     line-height: 105%;
 }
+@media (max-width: 576px) {
+    #social_media_box div div div a.btn {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
 
 @media (min-width: 576px) {
     /* The manually defined Bootstrap container */
