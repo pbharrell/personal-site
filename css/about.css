@@ -190,6 +190,7 @@
     .content_box .header {
         font-size: 40px;
         padding-left: 12px;
+        margin-bottom: 10px;
     }
 
     #about_box .container-fluid {
@@ -248,6 +249,7 @@
     .content_box .header {
         font-size: 45px;
         padding-left: 12px;
+        margin-bottom: 12px;
     }
 
     #about_box .container-fluid {
@@ -299,6 +301,7 @@
     /* Defining for specifically the about box */
     .content_box .header {
         font-size: 48px;
+        margin-bottom: 14px;
     }
 
     #about_box .container-fluid {
@@ -317,25 +320,25 @@
     /* Defining for specifically the about header */
     .about-header .intro-text {
         text-align: right;
-        padding-right: 130px;
-        padding-bottom: 15px;
+        padding-right: 90px;
+        padding-bottom: 19px;
     }
 
     .about-header .intro-text h1 {
-        font-size: 140px;
+        font-size: 148px;
         margin: 0px;
         line-height: 1;
     }
 
     .about-header .intro-text h2 {
         color: var(--black);
-        font-size: 90px;
+        font-size: 95px;
         line-height: 1;
         margin: 0px;
     }
 
     .about-header .intro-text p {
-        font-size: 63px;
+        font-size: 67px;
         margin: 0px;
         line-height: 1.1;
     }
@@ -351,6 +354,7 @@
     /* Defining for specifically the about box */
     .content_box .header {
         font-size: 53px;
+        margin-bottom: 15px;
     }
 
     #about_box .container-fluid {

@@ -12,7 +12,7 @@ class Header extends HTMLElement {
         home: "#",
         experience: "#",
         portfolio: "#",
-        about: "#",
+        skills: "#",
         contact: "#"
       };
     }
@@ -24,7 +24,7 @@ class Header extends HTMLElement {
             this.links["home"] = "index.html";
             this.links["experience"] = "../html/experience.html";
             this.links["portfolio"] = "../html/portfolio.html";
-            this.links["about"] = "../html/about.html";
+            this.links["skills"] = "../html/skills.html";
             this.links["contact"] = "../html/contact.html";
         }
         // Setting links if the current page is not home
@@ -32,7 +32,7 @@ class Header extends HTMLElement {
             this.links["home"] = "../src/index.html";
             this.links["experience"] = "experience.html";
             this.links["portfolio"] = "portfolio.html";
-            this.links["about"] = "about.html";
+            this.links["skills"] = "skills.html";
             this.links["contact"] = "contact.html";
         }
 
@@ -46,7 +46,7 @@ class Header extends HTMLElement {
                         <li><a href="${this.links["home"]}">Home</a></li>
                         <li><a href="${this.links["experience"]}">Experience</a></li>
                         <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                        <li><a href="${this.links["about"]}">About</a></li>
+                        <li><a href="${this.links["skills"]}">Skills</a></li>
                         <li><a href="${this.links["contact"]}">Contact</a></li>
                     </ul>  
                 </div>
@@ -80,7 +80,7 @@ class Header extends HTMLElement {
                         <li><div class="home"></div></li>
                         <li><div class="experience"></div></li>
                         <li><div class="portfolio"></div></li>
-                        <li><div class="about"></div></li>
+                        <li><div class="skills"></div></li>
                         <li><div class="contact"></div></li>
                     </ul>  
                 </div>
@@ -112,7 +112,7 @@ class Header extends HTMLElement {
                     <li><a href="${this.links["home"]}">Home</a></li>
                     <li><a href="${this.links["experience"]}">Experience</a></li>
                     <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                    <li><a href="${this.links["about"]}">About</a></li>
+                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["contact"]}">Contact</a></li>
                 </ul>
             </div>
@@ -162,9 +162,9 @@ class Header extends HTMLElement {
             </div>
             `;
         }
-        else if (pageName === "about") {
+        else if (pageName === "skills") {
             title_line = `
-            <div id="about_spacer_line" class="title_text"></div>
+            <div id="skills_spacer_line" class="title_text"></div>
             `;
         }
         else if (pageName === "contact") {
@@ -205,7 +205,7 @@ class Header extends HTMLElement {
                     <li><a href="${this.links["home"]}">Home</a></li>
                     <li><a href="${this.links["experience"]}">Experience</a></li>
                     <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                    <li><a href="${this.links["about"]}">About</a></li>
+                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["contact"]}">Contact</a></li>
                 </ul>
             </div>
