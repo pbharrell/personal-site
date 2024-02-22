@@ -1,0 +1,48 @@
+:root {
+    --primaryGreen: #4c8971;
+    --secondaryGreen: #8fa89e;
+    --headingYellow: #ab9155;
+    --selectYellow: #f7ce6f;
+    --white: #ffffff;
+    --black: #000000;
+    
+    --resumeWidth: 600px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#resume {
+    width: var(--resumeWidth);
+    height: calc(var(--resumeWidth) * (11 / 8.5));
+    background-color: white;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .4);
+    display: flex;
+    padding: 0;
+}
+
+#left-col {
+    background-color: var(--primaryGreen);
+    width: 30%;
+    height: auto;
+}
+
+#right-col {
+    width: 70%;
+    height: auto;
+}
+
+.margins {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* Reference: https://medium.com/@iftimiealexandru/creating-a-resume-using-html-and-css-and-saving-it-as-a-pdf-e85d24b0408e */
+
+/* Standard US printer paper size - 8.5 x 11in */
+
+

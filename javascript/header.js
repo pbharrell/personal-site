@@ -10,9 +10,9 @@ class Header extends HTMLElement {
     // Dictionary of the link values for header line
       this.links = {
         home: "#",
+        skills: "#",
         experience: "#",
         portfolio: "#",
-        skills: "#",
         contact: "#"
       };
     }
@@ -22,17 +22,17 @@ class Header extends HTMLElement {
         // Setting links if the current page is home
         if (pageName === "home") {
             this.links["home"] = "index.html";
+            this.links["skills"] = "../html/skills.html";
             this.links["experience"] = "../html/experience.html";
             this.links["portfolio"] = "../html/portfolio.html";
-            this.links["skills"] = "../html/skills.html";
             this.links["contact"] = "../html/contact.html";
         }
         // Setting links if the current page is not home
         else {
             this.links["home"] = "../src/index.html";
+            this.links["skills"] = "skills.html";
             this.links["experience"] = "experience.html";
             this.links["portfolio"] = "portfolio.html";
-            this.links["skills"] = "skills.html";
             this.links["contact"] = "contact.html";
         }
 
@@ -44,9 +44,9 @@ class Header extends HTMLElement {
                 <div class="container">
                     <ul>
                         <li><a href="${this.links["home"]}">Home</a></li>
+                        <li><a href="${this.links["skills"]}">Skills</a></li>
                         <li><a href="${this.links["experience"]}">Experience</a></li>
                         <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                        <li><a href="${this.links["skills"]}">Skills</a></li>
                         <li><a href="${this.links["contact"]}">Contact</a></li>
                     </ul>  
                 </div>
@@ -78,9 +78,9 @@ class Header extends HTMLElement {
                 <div class="container">
                     <ul>
                         <li><div class="home"></div></li>
+                        <li><div class="skills"></div></li>
                         <li><div class="experience"></div></li>
                         <li><div class="portfolio"></div></li>
-                        <li><div class="skills"></div></li>
                         <li><div class="contact"></div></li>
                     </ul>  
                 </div>
@@ -110,9 +110,9 @@ class Header extends HTMLElement {
             <div class="container">
                 <ul id="mobile-menu">
                     <li><a href="${this.links["home"]}">Home</a></li>
+                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["experience"]}">Experience</a></li>
                     <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["contact"]}">Contact</a></li>
                 </ul>
             </div>
@@ -140,12 +140,7 @@ class Header extends HTMLElement {
         // Updating title line with what it should be for each page
         if (pageName === "home") {
             title_line = `
-            <div id="home_name_line" class="title_text">
-                <p>Preston Harrell</p>
-            </div>
-            <div id="home_sub_line" class="subheader_text">
-                <p>Backend software engineer</p>
-            </div>
+            <div id="skills_spacer_line" class="title_text"></div>
             `;
         }
         else if (pageName === "experience") {
@@ -164,7 +159,12 @@ class Header extends HTMLElement {
         }
         else if (pageName === "skills") {
             title_line = `
-            <div id="skills_spacer_line" class="title_text"></div>
+            <div id="skills_name_line" class="title_text">
+                <p>Preston Harrell</p>
+            </div>
+            <div id="skills_sub_line" class="subheader_text">
+                <p>Backend software engineer</p>
+            </div>
             `;
         }
         else if (pageName === "contact") {
@@ -203,9 +203,9 @@ class Header extends HTMLElement {
             <div class="container">
                 <ul id="mobile-menu">
                     <li><a href="${this.links["home"]}">Home</a></li>
+                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["experience"]}">Experience</a></li>
                     <li><a href="${this.links["portfolio"]}">Portfolio</a></li>
-                    <li><a href="${this.links["skills"]}">Skills</a></li>
                     <li><a href="${this.links["contact"]}">Contact</a></li>
                 </ul>
             </div>

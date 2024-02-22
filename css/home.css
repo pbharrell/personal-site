@@ -1,228 +1,365 @@
-/* Styling for Home page */
-#home_name_line {
-    font-size: 28px;
-    padding-left: 2px;
+:root {
+    --primaryGreen: #4c8971;
+    --secondaryGreen: #8fa89e;
+    --headingYellow: #ab9155;
+    --selectYellow: #f7ce6f;
+    --white: #FFFFFF;
+    --black: #000000;
+    --facebookBlue: #4267B2;
+    --instagramPink: #f00075; /* (official Wordpress coloring) Source: https://wordpress.com/support/wordpress-editor/blocks/social-icons-block/ */
+    --linkedinBlue: #0072b1;
+    --githubBlack: #171515;
 }
 
-/* Scrolling image box source: https://www.youtube.com/watch?v=nAjR0Oj0J8E */
-.scrolling-image-box {
-    z-index: 0;
-    overflow: hidden;
-    position: relative;
-    height: 270px;
-}
-
-.scrolling-image-wrapper {
-    height: 100%;
-    display: flex;
-}
-
-.scrolling-image {
-    flex: 1;
-    background-repeat: repeat-x;
-    object-fit: contain;
-    animation: slide 60s linear infinite;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
+@media (max-width: 576px) {
+    #title_profile_container {
+        top: -10px;
+        margin-bottom: -45px;
+    } 
+    
+    #title_profile_wrapper {
+        padding-top: -30px;
     }
-    100% {
-        transform: translateX(-100%); /* The image width */
+    
+    #profile_container {
+        width: 140px;
+        height: 140px;
+        top: 30px;
+    }    
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #title_profile_container {
+        top: -10px;
+        margin-bottom: -60px;
+    } 
+    
+    #title_profile_wrapper {
+        padding-top: -40px;
+    }
+    
+    #profile_container {
+        width: 180px;
+        height: 180px;
+        top: 40px;
     }
 }
 
-#home_sub_line {
-    display: none;
+/* Defining for specifically the about header */
+.about-header {
+    text-align: center;
+    margin-top: -10px;
+}
+.about-header .about-box {
+    align-items: center;
+    justify-content: space-between;
 }
 
-div.block-left {
-    position: absolute;
-    background-color: var(--secondaryGreen);
+.about-header .intro-text {
+    text-align: left;
+    padding-bottom: 20px;
 }
 
-div.fade-left {
-    position: absolute;
-    z-index: 9;
-    top: 0px;
-    left: 0px;
-
-    display: block;
-  
-    width: 10%;
-    height: 100%;
-  
-    background-image: linear-gradient(
-        to left, 
-        rgba(255, 255, 255, 0), 
-        rgba(143, 168, 158, 1)
-        100%
-        );
+.about-header .intro-text h1 {
+    font-size: 70px;
+    margin: 0px;
+    line-height: 1;
 }
 
-div.fade-right {
-    position: absolute;
-    z-index: 9;
-    top: 0px;
-    right: 0px;
+.about-header .intro-text h2 {
+    color: var(--black);
+    font-size: 55px;
+    line-height: 1;
+    margin: 0px;
+}
 
-    display: block;
-  
-    width: 10%;
-    height: 100%;
-  
-    background-image: linear-gradient(
-        to right, 
-        rgba(255, 255, 255, 0), 
-        rgba(143, 168, 158, 1)
-        100%
-        );
+.about-header .intro-text p {
+    font-size: 35px;
+    margin: 0px;
+    line-height: 1.1;
+}
+
+.about-header .intro-image img {
+    padding-top: 0px;
+    width: 100%;
+    border: .4rem solid;
+    border-color: var(--secondaryGreen);
+    border-radius: 2.5%;
 }
 
 .content_box .header {
-    text-align: center;
-    padding-top: 25px;
-    margin: 0px;
-    color: white;
-}
-
-.content_box .header h1 {
-    font-size: 33px;
-}
-
-.content_box .subheader {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    color: white;
-}
-
-.content_box .subheader h4 {
-    font-size: 25px;
+    margin-top: 15px;
 }
 
 @media (min-width: 576px) {
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        font-size: 45px;
-    }
-
-    .content_box .header {
-        display: flex;
-        justify-content: left;
-        padding-top: 25px;
-        padding-left: 25px;
-        margin-bottom: 0px;
-    }
-
-    .content_box .header h1 {
-        font-size: 40px;
-    }
-
-    .content_box .subheader {
-        display: flex;
-        justify-content: right;
-        text-align: right;
-        padding-right: 25px;
+    .about-header .intro-text {
+        text-align: left;
         padding-bottom: 20px;
     }
 
-    .content_box .subheader h4 {
-        width: 85%;
-        font-size: 32px;
+    .about-header .intro-text h1 {
+        font-size: 85px;
+        margin: 0px;
+        line-height: 1;
     }
+
+    .about-header .intro-text h2 {
+        color: var(--black);
+        font-size: 70px;
+        line-height: 1;
+        margin: 0px;
+    }
+
+    .about-header .intro-text p {
+        font-size: 52px;
+        margin: 0px;
+        line-height: 1.1;
+    }
+
+    /* Defining for specifically the about box */
+    .content_box .container-fluid .row {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .content_box .header {
+        font-size: 30px;
+        padding-left: 12px;
+    }
+
+    #about_box .container-fluid {
+        padding-top: 35px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
+
+    /* Defining for specifically the about header */
+
+    /* Defining for specifically the about box */
 }
 @media (min-width: 768px) {
     #title_profile_wrapper {
-        margin-bottom: -110px;
+        margin-bottom: -170px;
     }
 
-    /* Defining the title and subtitle size for different resolutions */    
-    #home_name_line {
-        font-size: 73.2px;
-        margin-bottom: -30px;
-    }
-    #home_sub_line {
-        display: block;
-        font-size: 39.7px;
+    .about-header .about-box {
+        flex-direction: row;
     }
 
-    /* Defining the header and subheader used on the homepage specifically */
-    .content_box {
-        margin-top: 45px;
-    }    
+    .about-header .intro-text {
+        text-align: right;
+        padding-left: 0px;
+        padding-right: 30px;
+        padding-bottom: 8px;
+    }
+
+    .about-header .intro-text h1 {
+        font-size: 80px;
+        margin: 0px;
+        line-height: 1;
+    }
+
+    .about-header .intro-text h2 {
+        color: var(--black);
+        font-size: 47px;
+        line-height: 1;
+        margin: 0px;
+    }
+
+    .about-header .intro-text p {
+        font-size: 36px;
+        margin: 0px;
+        line-height: 1.1;
+    }
+
+    .about-header .intro-image img {
+        padding-top: 0px;
+        width: 100%;
+        border: .4rem solid;
+        border-color: var(--secondaryGreen);
+        border-radius: 2.5%;
+    }
+
+    /* Defining for specifically the about box */
+    .content_box .container-fluid .row {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
     .content_box .header {
-        padding-left: 50px;
-        padding-top: 25px;
+        font-size: 40px;
+        padding-left: 12px;
+        margin-bottom: 10px;
     }
 
-    .content_box .header h1 {
-        font-size: 50px;
+    #about_box .container-fluid {
+        padding-top: 35px;
+        padding-left: 34px;
+        padding-right: 34px;
     }
 
-    .content_box .subheader {
-        padding-right: 50px;
-        padding-bottom: 20px;
-    }
-
-    .content_box .subheader h4 {
-        font-size: 38px;
-    }
-
-    .scrolling-image-box {
-        height: 350px;
-    }
-    .scrolling-image {
-        height: 350px;
-    }
 }
-
 @media (min-width: 992px) {
-    #home_name_line {
-        font-size: 89.6px;
-        margin-bottom: -38px;
-    }
-    #home_sub_line {
-        font-size: 48.6px;
+    #title_profile_wrapper {
+        margin-bottom: -205px;
     }
 
-    /* Defining the header and subheader used on the homepage specifically */
+    /* Defining for specifically the about header */
+    .about-header .intro-text {
+        text-align: right;
+        padding-right: 30px;
+        padding-bottom: 6px;
+        /* padding-top: 4px; */
+    }
+
+    .about-header .intro-text h1 {
+        font-size: 98px;
+        margin: 0px;
+        line-height: 1;
+    }
+
+    .about-header .intro-text h2 {
+        color: var(--black);
+        font-size: 62px;
+        line-height: 1;
+        margin: 0px;
+    }
+
+    .about-header .intro-text p {
+        font-size: 52px;
+        margin: 0px;
+        line-height: 1.1;
+    }
+
+    .about-header .intro-image img {
+        padding-top: 0px;
+        width: 100%;
+        border: .4rem solid;
+        border-color: var(--secondaryGreen);
+        border-radius: 2.5%;
+    }
+
+    /* Defining for specifically the about box */
+    .content_box .container-fluid .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .content_box .header {
-        padding-top: 25px;
+        font-size: 45px;
+        padding-left: 12px;
+        margin-bottom: 12px;
     }
 
-    .content_box .header h1 {
-        font-size: 55px;
+    #about_box .container-fluid {
+        padding-top: 35px;
+        padding-left: 34px;
+        padding-right: 34px;
     }
 
-    .content_box .subheader {
-        padding-bottom: 25px;
-    }
-
-    .content_box .subheader h4 {
-        font-size: 33px;
-    }
 }
 @media (min-width: 1200px) {
-    /* Defining the title and subtitle size for different resolutions */
-    #home_name_line {
-        font-size: 95.9px;
-        margin-bottom: -40px;
-    }
-    #home_sub_line {
-        font-size: 52px;
+    #title_profile_wrapper {
+        margin-bottom: -215px;
     }
 
-    /* Defining the header and subheader used on the homepage specifically */
-    .content_box .subheader h4 {
-        font-size: 38px;
+    /* Defining for specifically the about header */
+    .about-header .intro-text {
+        text-align: right;
+        padding-right: 75px;
+        padding-bottom: 10px;
     }
 
+    .about-header .intro-text h1 {
+        font-size: 112px;
+        margin: 0px;
+        line-height: 1;
+    }
+
+    .about-header .intro-text h2 {
+        color: var(--black);
+        font-size: 72px;
+        line-height: 1;
+        margin: 0px;
+    }
+
+    .about-header .intro-text p {
+        font-size: 57px;
+        margin: 0px;
+        line-height: 1.1;
+    }
+
+    .about-header .intro-image img {
+        padding-top: 0px;
+        width: 100%;
+        border: .4rem solid;
+        border-color: var(--secondaryGreen);
+        border-radius: 2.5%;
+    }
+
+    /* Defining for specifically the about box */
+    .content_box .header {
+        font-size: 48px;
+        margin-bottom: 14px;
+    }
+
+    #about_box .container-fluid {
+        padding-top: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 
 @media (min-width: 1400px) {
+    #title_profile_wrapper {
+        margin-bottom: -210px;
+    }
+
+    /* Defining for specifically the about header */
+    .about-header .intro-text {
+        text-align: right;
+        padding-right: 90px;
+        padding-bottom: 19px;
+    }
+
+    .about-header .intro-text h1 {
+        font-size: 148px;
+        margin: 0px;
+        line-height: 1;
+    }
+
+    .about-header .intro-text h2 {
+        color: var(--black);
+        font-size: 95px;
+        line-height: 1;
+        margin: 0px;
+    }
+
+    .about-header .intro-text p {
+        font-size: 67px;
+        margin: 0px;
+        line-height: 1.1;
+    }
+
+    .about-header .intro-image img {
+        padding-top: 0px;
+        width: 100%;
+        border: .4rem solid;
+        border-color: var(--secondaryGreen);
+        border-radius: 2.5%;
+    }
+
+    /* Defining for specifically the about box */
+    .content_box .header {
+        font-size: 53px;
+        margin-bottom: 15px;
+    }
+
+    #about_box .container-fluid {
+        padding-top: 50px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }

@@ -1,0 +1,228 @@
+/* Styling for Home page */
+#skills_name_line {
+    font-size: 28px;
+    padding-left: 2px;
+}
+
+/* Scrolling image box source: https://www.youtube.com/watch?v=nAjR0Oj0J8E */
+.scrolling-image-box {
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    height: 270px;
+}
+
+.scrolling-image-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.scrolling-image {
+    flex: 1;
+    background-repeat: repeat-x;
+    object-fit: contain;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* The image width */
+    }
+}
+
+#skills_sub_line {
+    display: none;
+}
+
+div.block-left {
+    position: absolute;
+    background-color: var(--secondaryGreen);
+}
+
+div.fade-left {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    left: 0px;
+
+    display: block;
+  
+    width: 10%;
+    height: 100%;
+  
+    background-image: linear-gradient(
+        to left, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+        100%
+        );
+}
+
+div.fade-right {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    right: 0px;
+
+    display: block;
+  
+    width: 10%;
+    height: 100%;
+  
+    background-image: linear-gradient(
+        to right, 
+        rgba(255, 255, 255, 0), 
+        rgba(143, 168, 158, 1)
+        100%
+        );
+}
+
+.content_box .header {
+    text-align: center;
+    padding-top: 25px;
+    margin: 0px;
+    color: white;
+}
+
+.content_box .header h1 {
+    font-size: 33px;
+}
+
+.content_box .subheader {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: white;
+}
+
+.content_box .subheader h4 {
+    font-size: 25px;
+}
+
+@media (min-width: 576px) {
+    /* Defining the title and subtitle size for different resolutions */
+    #skills_name_line {
+        font-size: 45px;
+    }
+
+    .content_box .header {
+        display: flex;
+        justify-content: left;
+        padding-top: 25px;
+        padding-left: 25px;
+        margin-bottom: 0px;
+    }
+
+    .content_box .header h1 {
+        font-size: 40px;
+    }
+
+    .content_box .subheader {
+        display: flex;
+        justify-content: right;
+        text-align: right;
+        padding-right: 25px;
+        padding-bottom: 20px;
+    }
+
+    .content_box .subheader h4 {
+        width: 85%;
+        font-size: 32px;
+    }
+}
+@media (min-width: 768px) {
+    #title_profile_wrapper {
+        margin-bottom: -110px;
+    }
+
+    /* Defining the title and subtitle size for different resolutions */    
+    #skills_name_line {
+        font-size: 73.2px;
+        margin-bottom: -30px;
+    }
+    #skills_sub_line {
+        display: block;
+        font-size: 39.7px;
+    }
+
+    /* Defining the header and subheader used on the homepage specifically */
+    .content_box {
+        margin-top: 45px;
+    }    
+
+    .content_box .header {
+        padding-left: 50px;
+        padding-top: 25px;
+    }
+
+    .content_box .header h1 {
+        font-size: 50px;
+    }
+
+    .content_box .subheader {
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+
+    .content_box .subheader h4 {
+        font-size: 38px;
+    }
+
+    .scrolling-image-box {
+        height: 350px;
+    }
+    .scrolling-image {
+        height: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    #skills_name_line {
+        font-size: 89.6px;
+        margin-bottom: -38px;
+    }
+    #skills_sub_line {
+        font-size: 48.6px;
+    }
+
+    /* Defining the header and subheader used on the homepage specifically */
+    .content_box .header {
+        padding-top: 25px;
+    }
+
+    .content_box .header h1 {
+        font-size: 55px;
+    }
+
+    .content_box .subheader {
+        padding-bottom: 25px;
+    }
+
+    .content_box .subheader h4 {
+        font-size: 33px;
+    }
+}
+@media (min-width: 1200px) {
+    /* Defining the title and subtitle size for different resolutions */
+    #skills_name_line {
+        font-size: 95.9px;
+        margin-bottom: -40px;
+    }
+    #skills_sub_line {
+        font-size: 52px;
+    }
+
+    /* Defining the header and subheader used on the homepage specifically */
+    .content_box .subheader h4 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (min-width: 1400px) {
+}

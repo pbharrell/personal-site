@@ -54,3 +54,8 @@ $(window).resize(function() {
       ClearContactAlignment();
     }
 });
+
+function toggleResumePreview() {
+  let resume_preview = document.getElementById("overlay");
+  console.log(resume_preview);
+}
