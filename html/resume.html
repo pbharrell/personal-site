@@ -7,6 +7,13 @@
     <!-- My custom meta tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Resume - Preston Harrell</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
@@ -18,21 +25,88 @@
         <nav>
             <div class="container">
                 <button></button>
-                <li><a href="${this.links["contact"]}">Contact</a></li>
+                <li>
+                    <a href="">
+                        <p>contact</p>
+                    </a>
+                </li>
             </div>
         </nav>
     </div>
 
     <div id="main">
         <div id="resume" class="container">
-            <div id="left-col" class="margins">
-                <div>
-                    tmp
+            <div id="left-col">
+                <div class="name_box margins">
+                    <h1>Preston Harrell</h1>  
+                    <h5>Computer Scientist</h5>
+                    <p>prestonbharrell@gmail.com</p>
+                    <p>(248) 766-4670</p>
+                    <p>LinkedIn</p>
+                    <p>Github</p>
+                    </div>
+                <div class="education_box margins">
+                    <h2>Education</h2>
+                    <h5>B.S. in Computer Science</h5>
+                    <h5>Michigan State Universtiy</h5>
+                    <p>August 2019 - May 2023</p>
+                    <p>3.94 GPA</p>
+                </div>
+                <div class="skills_box margins">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li><p>C++</p></li>
+                        <li><p>Python</p></li>
+                        <li><p>Machine Learning</p></li>
+                        <li><p>Android Platform</p></li>
+                        <li><p>Linux</p></li>
+                        <li><p>C</p></li>
+                    </ul>
                 </div>
             </div>
-            <div id="right-col" class="margins">
-                <div class="margins">
-                    tmp
+            <div id="right-col">
+                <div id="experience_box" class="margins">
+                    <h2><p>Work Experience</p></h2>
+                    <h3>Software Engineer</h3>
+                    <h4>Garmin</h4>
+                    <div style="display: flex; justify-content: space-between;">
+                        <p>July 2023 - now</p>
+                        <p>Novi, MI</p>
+                    </div>
+                    <p>
+                        Work on Android Automotive infotainment in the connectivity group
+                        and fix defects in the Android Bluetooth stack. Develop tools to assist 
+                        with defect analysis and provide JIRA analytics.
+                    </p>
+
+                    <h3>Software Engineering Intern</h3>
+                    <h4>Garmin</h4>
+                    <div style="display: flex; justify-content: space-between;">
+                        <p>May 2022 - August 2022</p>
+                        <p>Novi, MI</p>
+                    </div>
+                    <p>
+                        Worked in Python writing automated tests for Android Automotive 
+                        infotainment. Used a Git repository, performed code reviews, and wrote 
+                        code for use of other divisions. Gained a strong understanding of the 
+                        infotainment hardware and interface with it at a low level.
+                    </p>
+
+                    <h3>IT Cooperative Assistant</h3>
+                    <h4>Consumers Energy</h4>
+                    <div style="display: flex; justify-content: space-between;">
+                        <p>May 2021 - August 2021</p>
+                        <p>Novi, MI</p>
+                    </div>
+                    <p>
+                        Simplified and automated many complex company workflows, netting 
+                        significant company time savings. Gained general business skills like 
+                        communicating effectively in a business setting and pitching and 
+                        presenting solutions to a customer.
+                    </p>
+                </div>
+                <div id="projects_box" class="margins">
+
                 </div>
             </div>
         </div>

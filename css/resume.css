@@ -11,6 +11,7 @@
 
 body {
     background-color: lightgray;
+    font-family: Titillium Web
 }
 
 #resume {
@@ -24,12 +25,12 @@ body {
 
 #left-col {
     background-color: var(--primaryGreen);
-    width: 30%;
+    width: 35%;
     height: auto;
 }
 
 #right-col {
-    width: 70%;
+    width: 55%;
     height: auto;
 }
 
