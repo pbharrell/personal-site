@@ -22,14 +22,14 @@ class Header extends HTMLElement {
         // Setting links if the current page is home
         if (pageName === "home") {
             this.links["home"] = "index.html";
-            this.links["skills"] = "../html/skills.html";
-            this.links["experience"] = "../html/experience.html";
-            this.links["portfolio"] = "../html/portfolio.html";
-            this.links["contact"] = "../html/contact.html";
+            this.links["skills"] = "html/skills.html";
+            this.links["experience"] = "html/experience.html";
+            this.links["portfolio"] = "html/portfolio.html";
+            this.links["contact"] = "html/contact.html";
         }
         // Setting links if the current page is not home
         else {
-            this.links["home"] = "../src/index.html";
+            this.links["home"] = "../index.html";
             this.links["skills"] = "skills.html";
             this.links["experience"] = "experience.html";
             this.links["portfolio"] = "portfolio.html";
