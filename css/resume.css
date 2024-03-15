@@ -6,44 +6,157 @@
     --white: #ffffff;
     --black: #000000;
     
-    --resumeWidth: 600px;
+    --resumeWidth: 8.5in;
 }
 
-body {
-    background-color: lightgray;
-    font-family: Titillium Web
+.adaptive-container {
+    /* Define a container */
+    /* Use `inline-size` instead of `size` if you are only
+       interested in inline size, which is horizontal
+       for Latin and many other layouts. */
+    container-type: inline-size;
 }
 
+/* Resume-specific styles */
+/* Reference: https://medium.com/@iftimiealexandru/creating-a-resume-using-html-and-css-and-saving-it-as-a-pdf-e85d24b0408e */
 #resume {
-    width: var(--resumeWidth);
-    height: calc(var(--resumeWidth) * (11 / 8.5));
+    /* Standard US printer paper size - 8.5 x 11in */
+    height: fit-content;
     background-color: white;
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .4);
+    -webkit-print-color-adjust: exact;
     display: flex;
     padding: 0;
+    font-family: Ubuntu;
+    color: black;
+    width: var(--resumeWidth);
+    height: calc((11 / 8.5) * var(--resumeWidth));
+    flex-direction: row;
 }
 
-#left-col {
-    background-color: var(--primaryGreen);
+#resume h1 {
+    font-size: 5cqw;
+    font-family: Fira Code;
+    line-height: 1.2;
+    margin-bottom: .83cqw;
+}
+#resume h2 {
+    font-size: 4.3cqw;
+    font-family: Fira Code;
+    margin-bottom: .5cqw;
+}
+#resume h3 {
+    font-size: 3.7cqw;
+    font-family: Fira Code;
+}
+#resume h4 {
+    font-size: 3.5cqw;
+}
+#resume h5 {
+    font-family: Fira Code;
+    font-size: 2.6cqw;
+    margin-bottom: .33cqw;
+}
+
+#resume p {
+    font-size: 2.4cqw;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+#resume ul li::marker {
+    font-size: 2.4cqw;
+}
+#resume ul p {
+    font-size: 2.45cqw;
+    margin-bottom: 0;
+}
+
+#resume a {
+    color: var(--white);
+}
+
+#resume a:hover {
+    color: var(--selectYellow);
+}
+
+#resume .h-margins {
+    padding-left: 2.5cqw;
+    padding-right: 2.5cqw;
+}
+
+#resume .v-margins {
+    padding-top: 4.17cqw;
+    padding-bottom: 4.17cqw;
+}
+
+#resume #left-col {
     width: 35%;
     height: auto;
+    background-color: rgb(232, 234, 236);
+    white-space: nowrap;
 }
 
-#right-col {
-    width: 55%;
+#resume #name-box {
+    background-color: var(--primaryGreen);
+    color: white;
+}
+
+#resume #name-box h5 {
+    font-weight: bold;
+    margin-bottom: 2cqw;
+}
+
+#resume #name-box p {
+    font-size: 2.15cqw;
+}
+
+#resume #education-box {
+    margin-top: 3.33cqw;
+}
+
+#resume #skills-box {
+    margin-top: 4.17cqw;
+}
+
+#resume #interests-box {
+    margin-top: 4.17cqw;
+}
+
+#resume #left-col ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#resume #right-col {
+    width: 100%;
     height: auto;
 }
 
-.margins {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+#resume #right-col .header {
+    margin-bottom: 2.5cqw;
+    font-weight: 600;
 }
 
+#resume #right-col h3 {
+    font-weight: 400;
+    margin-bottom: .5cqw;
+}
 
-/* Reference: https://medium.com/@iftimiealexandru/creating-a-resume-using-html-and-css-and-saving-it-as-a-pdf-e85d24b0408e */
+#resume #right-col h4 {
+    margin-bottom: .83cqw;
+}
 
-/* Standard US printer paper size - 8.5 x 11in */
+#resume .experience-entry {
+    margin-bottom: 4.17cqw;
+}
 
+#resume .experience-entry h4 {
+    color: var(--primaryGreen);
+}
 
+#resume .experience-entry .date-loc {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 1.17cqw;
+}

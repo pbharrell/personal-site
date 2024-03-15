@@ -3,17 +3,9 @@
     padding-left: 2px;
 }
 
-.portfolio_image {
-    width: 100%;
-}
-
 #portfolio_box .container {
     padding-top: 5px;
     padding-bottom: 15px;
-}
-
-#portfolio_box .portfolio_image {
-    margin-bottom: 1%;
 }
 
 #portfolio_box .portfolio_title {
@@ -21,9 +13,34 @@
 }
 
 #portfolio_box .portfolio_image {
-    border-radius: 9%;
+    border-radius: 35px;
     border: .20rem solid;
     border-color: #4c8970;
+    margin-bottom: 1%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#portfolio_box .double_image_wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+}
+
+#portfolio_box .portfolio_image_l {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: .10rem solid;
+    width: 50%;
+    padding: 0px;
+}
+
+#portfolio_box .portfolio_image_r {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: .10rem solid;
+    width: 50%;
+    padding: 0px;
 }
 
 #portfolio_box .col-md-6 {
@@ -43,6 +60,16 @@
 
     #portfolio_box .portfolio_image {
         border: .30rem solid;
+        border-color: #4c8970;
+    }
+
+    #portfolio_box .portfolio_image_l {
+        border-right: .15rem solid;
+        border-color: #4c8970;
+    }
+    
+    #portfolio_box .portfolio_image_r {
+        border-left: .15rem solid;
         border-color: #4c8970;
     }
 
@@ -67,7 +94,18 @@
     #portfolio_box .portfolio_image {
         border: .10rem solid;
         border-color: #4c8970;
+        height: 225px;
     }
+
+    #portfolio_box .portfolio_image_l {
+        border-right: .05rem solid;
+        border-color: #4c8970;
+    }
+    
+    #portfolio_box .portfolio_image_r {
+        border-left: .05rem solid;
+        border-color: #4c8970;
+    }    
 
     #portfolio_box .container .following_row {
         padding-top: 14px;
@@ -82,7 +120,19 @@
     #portfolio_box .portfolio_image {
         border: .2rem solid;
         border-color: #4c8970;
+        height: 300px;
+    }
+
+    #portfolio_box .portfolio_image_l {
+        border-right: .1rem solid;
+        border-color: #4c8970;
+    }
+    
+    #portfolio_box .portfolio_image_r {
+        border-left: .1rem solid;
+        border-color: #4c8970;
     }    
+
 
     #portfolio_box .container {
         padding-top: 35px;
@@ -102,7 +152,19 @@
     #portfolio_box .portfolio_image {
         border: .3rem solid;
         border-color: #4c8970;
+        height: 350px;
+    }
+
+    #portfolio_box .portfolio_image_l {
+        border-right: .15rem solid;
+        border-color: #4c8970;
+    }
+    
+    #portfolio_box .portfolio_image_r {
+        border-left: .15rem solid;
+        border-color: #4c8970;
     }    
+
 
     #portfolio_box .container {
         padding-top: 40px;
@@ -123,6 +185,17 @@
     /* Defining for specifically the project portfolio box */
     #portfolio_box .portfolio_image {
         border: .4rem solid;
+        border-color: #4c8970;
+        height: 400px;
+    }
+
+    #portfolio_box .portfolio_image_l {
+        border-right: .2rem solid;
+        border-color: #4c8970;
+    }
+    
+    #portfolio_box .portfolio_image_r {
+        border-left: .2rem solid;
         border-color: #4c8970;
     }    
 

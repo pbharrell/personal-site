@@ -1,0 +1,249 @@
+:root {
+    --smallResumeWidth: 300px;
+    --largeResumeWidth: 700px;
+}
+
+/* Defining attributes for the resume preview */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100vw; /* Full width (cover the whole page) */
+    height: auto; /* Allow the height to adjust based on content */
+    min-height: 100%; /* Ensure a minimum height of 100% */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: default; /* Add a pointer on hover */
+    overflow-y: auto; /* Enable scrolling within the overlay if needed */
+}
+
+#overlay #exit-x {
+    position: absolute;
+    width: 31.5px;
+    height: 31.5px;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+#overlay #exit-x div {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top: 15.25px;
+    background-color: rgb(103, 103, 103);
+}
+
+#overlay #exit-x #left-top-bar {
+    rotate: 45deg;
+}
+
+#overlay #exit-x #left-bottom-bar {
+    rotate: -45deg;
+}
+
+#overlay #resume {
+    position: relative;
+    top: 30px;
+}
+  
+/* Overriding the static resume traits for dynamic one */
+@media (max-width: 768px) {
+    #overlay #exit-x {
+        width: 31.5px;
+        height: 31.5px;
+        top: 25px;
+        right: 25px;
+    }
+    
+    #overlay #exit-x div {
+        width: 30px;
+        height: 3px;
+        top: 15.25px;
+    }
+
+    #resume {
+        flex-direction: column;
+        width: 80vw;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .4);
+    }
+
+    #resume h1 {
+        font-size: 65px;
+        margin-bottom: 15px;
+    }
+    #resume h2 {
+        font-size: 42px;
+    }
+
+    #resume h3 {
+        font-size: 32px;
+        margin-bottom: 3px;
+    }
+
+    #resume h4 {
+        font-size: 28px;
+    }
+    #resume h5 {
+        font-size: 30px;
+    }
+    #resume p {
+        font-size: 21px;
+        margin-bottom: 0;
+    }
+    
+    #resume ul li::marker {
+        font-size: 22px;
+    }
+    #resume ul p {
+        font-size: 21px;
+        margin-bottom: 0;
+    }
+    
+    #resume .h-margins {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    #resume .v-margins {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    #resume #left-col {
+        width: 100%;
+    }
+
+    #resume #right-col {
+        width: 100%;
+    }
+
+    #resume #name-box {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+    
+    #resume #name-box h5 {
+        margin-bottom: 2px;
+    }
+    
+    #resume #name-box p {
+        font-size: 19px;
+    }
+
+    #resume #education-box {
+        margin-top: 35px;
+    }
+    
+    #resume #skills-box {
+        margin-top: 35px;
+    }
+    
+    #resume #interests-box {
+        margin-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    #resume #right-col {
+        padding-bottom: 10px;
+    }
+
+    #resume #right-col .header {
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    
+    #resume #right-col h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+    
+    #resume #right-col h4 {
+        margin-bottom: 8px;
+    }
+
+    #resume #right-col p {
+        font-size: 20px;
+    }
+    
+    #resume .experience-entry {
+        margin-bottom: 45px;
+    }
+    
+    #resume .experience-entry .date-loc {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    #overlay #exit-x {
+        width: 26px;
+        height: 26px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    #overlay #exit-x div {
+        width: 25px;
+        top: 15.25px;
+    }
+
+    #resume h1 {
+        font-size: 48px;
+    }
+    #resume h2 {
+        font-size: 38px;
+    }
+
+    #resume h3 {
+        font-size: 32px;
+    }
+
+    #resume h4 {
+        font-size: 23px;
+    }
+    #resume h5 {
+        font-size: 22px;
+    }
+    #resume p {
+        font-size: 18px;
+    }
+    
+    #resume ul li::marker {
+        font-size: 19px;
+    }
+    #resume ul p {
+        font-size: 18px;
+    }
+        
+    #resume #name-box p {
+        font-size: 15.5px;
+    }
+    
+    #resume #right-col h3 {
+        font-size: 23px;
+    }
+    
+    #resume #right-col p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 768px) {
+    #resume {
+        width: 80vw;
+        height: calc((11 / 8.5) * 80vw);
+        max-width: 700px;
+        max-height: calc((11 / 8.5) * 700px);
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .4);
+    }
+}

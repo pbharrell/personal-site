@@ -55,7 +55,12 @@ $(window).resize(function() {
     }
 });
 
-function toggleResumePreview() {
-  let resume_preview = document.getElementById("overlay");
-  console.log(resume_preview);
+function overlayOn() {
+  document.getElementById("overlay").style.display = "block";
+  document.body.style.overflow = "hidden";
 }
+
+function overlayOff() {
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+} 

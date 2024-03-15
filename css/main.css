@@ -211,7 +211,7 @@ nav li a:hover {
 
 
 .open .bar1 {
-    -webkit-transform: rotate(-45deg); /*translate(-6px, 6px);*/
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg) translate(-6px, 6px);
 }
 
@@ -220,7 +220,7 @@ nav li a:hover {
 }
 
 .open .bar3 {
-    -webkit-transform: rotate(45deg); /* translate(-6px, -6px);*/
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
