@@ -8,6 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to my Website!</title>
 
+    <script>
+      window.onload = function() {
+        document.body.style.opacity = "1"; // Once everything is loaded, make the body visible
+      }
+    </script>
+    <style>
+      /* Additional CSS to hide the body initially */
+      body {
+        opacity: 0;
+        transition: opacity 0.15s ease; /* You can adjust the transition duration */
+      }
+    </style>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -7,6 +7,19 @@
     <!-- My custom meta tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to my Website!</title>
+    <script>
+      window.onload = function() {
+        document.body.style.opacity = "1"; // Once everything is loaded, make the body visible
+      }
+    </script>
+    <style>
+      /* Additional CSS to hide the body initially */
+      body {
+        opacity: 0;
+        transition: opacity 0.15s ease; /* You can adjust the transition duration */
+      }
+    </style>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
@@ -31,7 +44,7 @@
             </p>
           </div>
           <div class="intro-image col-md-5">
-            <img src="../Assets/w_picture.jpeg">
+            <img src="../Assets/w_picture.webp">
           </div>
         </div>
       </div>

@@ -7,6 +7,20 @@
     <!-- My custom meta tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to my Website!</title>
+
+    <script>
+      window.onload = function() {
+        document.body.style.opacity = "1"; // Once everything is loaded, make the body visible
+      }
+    </script>
+    <style>
+      /* Additional CSS to hide the body initially */
+      body {
+        opacity: 0;
+        transition: opacity 0.15s ease; /* You can adjust the transition duration */
+      }
+    </style>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -23,7 +37,7 @@
           <div class="container-fluid">
             <div class="row top_row">
               <div class="exp_image_col col-lg-6">
-                <img class="experience_image" src="../Assets/Garmin_image_cropped.png"></img>
+                <img class="experience_image" src="../Assets/garmin_work_experience.webp"></img>
               </div>
               <div class="exp_text_col col-lg-6">
                 <!-- <div class="spacer" style="height: 100px; width: 100%;"></div> -->
@@ -37,7 +51,7 @@
             </div>
             <div class="row bottom_row">
               <div class="exp_image_col col-lg-6">
-                <img class="experience_image" src="../Assets/Consumers_image_cropped.png"></img>
+                <img class="experience_image" src="../Assets/consumers_work_experience.webp"></img>
               </div>
               <div class="exp_text_col col-lg-6">
                 <h1 id="consumers_title">IT Cooperative Assistant</h1>

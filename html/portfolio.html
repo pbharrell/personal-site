@@ -7,6 +7,20 @@
     <!-- My custom meta tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to my Website!</title>
+
+    <script>
+      window.onload = function() {
+        document.body.style.opacity = "1"; // Once everything is loaded, make the body visible
+      }
+    </script>
+    <style>
+      /* Additional CSS to hide the body initially */
+      body {
+        opacity: 0;
+        transition: opacity 0.15s ease; /* You can adjust the transition duration */
+      }
+    </style>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -23,13 +37,13 @@
           <div class="container">
             <div class="row gx-5">
               <div class="col-md-6">
-                <img class="portfolio_image" src="../Assets/longboard_photo.jpg"></img>
+                <img class="portfolio_image" src="../Assets/portfolio_longboard.webp"></img>
                 <h1 class="portfolio_title">DIY Electric Longboard</h1>
               </div>
               <div class="col-md-6">
                 <div class="double_image_wrapper">
-                  <img class="portfolio_image portfolio_image_l" src="../Assets/printing_guardian.jpg"></img>
-                  <img class="portfolio_image portfolio_image_r" src="../Assets/frogs.jpg"></img>
+                  <img class="portfolio_image portfolio_image_l" src="../Assets/portfolio_printing.webp"></img>
+                  <img class="portfolio_image portfolio_image_r" src="../Assets/portfolio_frogs.webp"></img>
                 </div>
                 <h1 class="portfolio_title">3D Printing Projects</h1>
               </div>
@@ -37,15 +51,15 @@
             <div class="row gx-5 following_row">
               <div class="col-md-6">
                 <div class="double_image_wrapper">
-                  <img class="portfolio_image portfolio_image_l" src="../Assets/gameboy.jpg"></img>
-                  <img class="portfolio_image portfolio_image_r" src="../Assets/gameboy_gif-ezgif.com-speed.gif"></img>
+                  <img class="portfolio_image portfolio_image_l" src="../Assets/portfolio_gameboy.webp"></img>
+                  <video class="portfolio_image portfolio_image_r" src="../Assets/portfolio_gameboy_vid.mp4" autoplay loop muted></video>
                 </div>
                 <h1 class="portfolio_title">Raspberry Pi Emulator</h1>
               </div>
               <div class="col-md-6">
                 <div class="double_image_wrapper">
-                  <img class="portfolio_image portfolio_image_l" src="../Assets/Picture_box_inside.jpg"></img>
-                  <img class="portfolio_image portfolio_image_r" src="../Assets/picture_box_finished.jpg"></img>
+                  <img class="portfolio_image portfolio_image_l" src="../Assets/portfolio_pic_box_inside.webp"></img>
+                  <img class="portfolio_image portfolio_image_r" src="../Assets/portfolio_pic_box_complete.webp"></img>
                 </div>
                 <h1 class="portfolio_title">Lithophane Light Box</h1>
               </div>
