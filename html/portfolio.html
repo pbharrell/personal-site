@@ -10,6 +10,10 @@
 
     <script>
       window.onload = function() {
+        // Set the source of the video dynamically after the page has loaded
+        var video = document.getElementById('gameboy_video');
+        video.src = '../Assets/portfolio_gameboy_vid.mp4';
+
         document.body.style.opacity = "1"; // Once everything is loaded, make the body visible
       }
     </script>
@@ -52,7 +56,7 @@
               <div class="col-md-6">
                 <div class="double_image_wrapper">
                   <img class="portfolio_image portfolio_image_l" src="../Assets/portfolio_gameboy.webp"></img>
-                  <video class="portfolio_image portfolio_image_r" src="../Assets/portfolio_gameboy_vid.mp4" autoplay loop muted></video>
+                  <video id="gameboy_video" class="portfolio_image portfolio_image_r" autoplay loop muted></video>
                 </div>
                 <h1 class="portfolio_title">Raspberry Pi Emulator</h1>
               </div>
