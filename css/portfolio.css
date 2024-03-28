@@ -33,6 +33,7 @@
     border-right: .10rem solid;
     width: 50%;
     padding: 0px;
+    border-color: #4c8970;
 }
 
 #portfolio_box .portfolio_image_r {
@@ -41,6 +42,7 @@
     border-left: .10rem solid;
     width: 50%;
     padding: 0px;
+    border-color: #4c8970;
 }
 
 #portfolio_box .col-md-6 {
