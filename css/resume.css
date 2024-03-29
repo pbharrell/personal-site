@@ -31,6 +31,7 @@
     width: var(--resumeWidth);
     height: calc((11 / 8.5) * var(--resumeWidth));
     flex-direction: row;
+    margin: 0;
 }
 
 #resume h1 {
@@ -45,7 +46,7 @@
     margin-bottom: .5cqw;
 }
 #resume h3 {
-    font-size: 3.7cqw;
+    font-size: 3.6cqw;
     font-family: Fira Code;
 }
 #resume h4 {
@@ -67,7 +68,7 @@
     font-size: 2.4cqw;
 }
 #resume ul p {
-    font-size: 2.45cqw;
+    font-size: 2.4cqw;
     margin-bottom: 0;
 }
 
@@ -83,7 +84,7 @@
     padding-left: 2.5cqw;
     padding-right: 2.5cqw;
 }
-
+ 
 #resume .v-margins {
     padding-top: 4.17cqw;
     padding-bottom: 4.17cqw;
@@ -115,11 +116,11 @@
 }
 
 #resume #skills-box {
-    margin-top: 4.17cqw;
+    margin-top: 3.33cqw;
 }
 
 #resume #interests-box {
-    margin-top: 4.17cqw;
+    margin-top: 3.33cqw;
 }
 
 #resume #left-col ul {
@@ -147,7 +148,7 @@
 }
 
 #resume .experience-entry {
-    margin-bottom: 4.17cqw;
+    margin-bottom: 4.65cqw;
 }
 
 #resume .experience-entry h4 {

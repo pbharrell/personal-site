@@ -61,7 +61,7 @@ function overlayOn() {
   // Use setTimeout to delay applying opacity to prevent animation triggering immediately
   setTimeout(function() {
     document.getElementById("overlay").style.opacity = '1';
-  }, 100); // Adjust the delay as needed
+  }, 150); // Adjust the delay as needed
   document.body.style.overflow = "hidden";
 }
 
