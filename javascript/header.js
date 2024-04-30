@@ -194,7 +194,23 @@ class Header extends HTMLElement {
                 <!--Profile pic-->
                 <div id="profile_box_wrapper">
                     <div id="profile_container">
-                        <img src="../Assets/Profile_pic_crop.webp" alt="Profile">
+        `
+
+        if (pageName === "home") {
+            header_trailer +=
+            `
+            <img src="Assets/Profile_pic_crop.webp" alt="Profile">
+            `;
+        }
+        else {
+            header_trailer +=
+            `
+            <img src="../Assets/Profile_pic_crop.webp" alt="Profile">
+            `;
+        }
+
+        header_trailer +=
+        `
                     </div>
                 </div>
             </div>
