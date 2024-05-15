@@ -6,3 +6,4 @@
 - ## Octoprint Android device
 - ## Guardian Project
 - ## Home Server
+- ## High school emulation table

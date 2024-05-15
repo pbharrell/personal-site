@@ -1,0 +1,4 @@
+- [x] Speed up image load
+- [ ] Make projects clickable for more info
+- [ ] Experience clickable as well?
+- [ ] Explore AI page

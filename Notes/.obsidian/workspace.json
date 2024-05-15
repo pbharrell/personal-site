@@ -11,11 +11,28 @@
             "id": "1be109fc2cd62cd3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Portfolio page ideas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5ff731222a68e7d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Website To-Dos.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Website To-Dos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Website To-Dos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Website To-Dos.md"
+              }
             }
           }
         ]
@@ -138,6 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1be109fc2cd62cd3",
-  "lastOpenFiles": []
+  "active": "5ff731222a68e7d5",
+  "lastOpenFiles": [
+    "Portfolio page ideas.md",
+    "Website To-Dos.md",
+    "AI Page Idea.md"
+  ]
 }
