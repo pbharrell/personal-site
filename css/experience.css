@@ -6,6 +6,14 @@
 
 .experience_image {
     width: 100%;
+    overflow: hidden;
+}
+
+.experience_image_border {
+    border-style: solid;
+    border-width: 1.65vw;
+    border-top: 0;
+    border-color: #4c896f;
 }
 
 .experience_text {
@@ -24,6 +32,17 @@
     padding-top: 20px;
 }
 
+#experience_box .container-fluid .row {
+    align-items: center;
+}
+
+#experience_box .container-fluid .row .exp_image_col {
+    background: #808080af;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2%;
+}
+
 .exp_text_col {
     margin-top: 20px;
     margin-bottom: 15px;
@@ -35,6 +54,10 @@
     }
 
     /* Defining for specifically the work experience box */
+    .experience_image_border {
+        border-width: 8.8px;
+    }
+
     .exp_text_col {
         margin-top: 10px;
         margin-bottom: 20px;
@@ -60,6 +83,10 @@
     #experience_box .container-fluid .bottom_row {
         padding-top: 10px;
         padding-bottom: 15px;
+    }
+
+    .experience_image_border {
+        border-width: 11.2px;
     }
 
     #experience_box #garmin_title {
@@ -97,6 +124,10 @@
         padding-bottom: 15px;
     }
 
+    .experience_image_border {
+        border-width: 7.9px;
+    }
+
     #experience_box #garmin_title {
         padding-top: 5px;
     }
@@ -125,6 +156,10 @@
     #experience_box .container-fluid .bottom_row {
         padding-top: 20px;
         padding-bottom: 15px;
+    }
+
+    .experience_image_border {
+        border-width: 9.4px;
     }
 
     #experience_box #garmin_title {
@@ -159,6 +194,10 @@
     #experience_box .container-fluid .bottom_row {
         padding-top: 40px;
         padding-bottom: 15px;
+    }
+
+    .experience_image_border {
+        border-width: 9.6px;
     }
 
     #experience_box #garmin_title {
